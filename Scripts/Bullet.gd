@@ -6,6 +6,7 @@ extends Area2D
 onready var timer = $Timer
 var speed = 300
 var direction = Vector2(-1,0)
+var damage = 5
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	timer.connect("timeout",self,"queue_free")
@@ -19,6 +20,10 @@ func _process(delta):
 func _enemy_entered(body):
 	if body.is_in_group("Enemy"):
 		print("Found enemy")
+		if body.has_method("take_damage"):
+			body.take_damage(damage)
+			queue_free()
+			pass
 	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

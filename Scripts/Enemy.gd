@@ -9,7 +9,7 @@ export(int) var SPEED = 100
 
 var vel_vec = Vector2(SPEED, 0)
 
-func get_shot(damage):
+func take_damage(damage):
 	HP -= damage
 	if HP <= 0:
 		queue_free()
