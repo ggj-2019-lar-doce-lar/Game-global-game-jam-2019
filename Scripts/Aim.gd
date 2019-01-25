@@ -18,6 +18,9 @@ func set_bullet_cooldown(time):
 
 func get_bullet_cooldown():
 	return timer.wait_time
+	
+func get_current_timer():
+	return timer.wait_time - timer.get_time_left()
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	timer.connect("timeout",self,"_on_end_cooldown")
