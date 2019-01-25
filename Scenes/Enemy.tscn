@@ -16,3 +16,12 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
+[node name="LifeBar" type="TextureProgress" parent="."]
+margin_left = -23.6278
+margin_top = -40.7696
+margin_right = 40.3722
+margin_bottom = 23.2304
+rect_scale = Vector2( 0.747565, 0.0663369 )
+value = 50.0
+texture_progress = ExtResource( 2 )
+
