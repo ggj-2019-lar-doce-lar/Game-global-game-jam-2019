@@ -3,15 +3,19 @@ extends Node2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-var next_scene = preload("res://Scenes/Title.tscn")
+var next_scene = preload("res://Scenes/Level_test.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Start.connect("pressed",self,"_on_new_game")
-	$Quit.connect("pressed",self,"_on_quit")
+	if $Start.connect("pressed",self,"_on_new_game") != 0:
+		print("Error: Failed connecting signal")
+	if $Quit.connect("pressed",self,"_on_quit") != 0:
+		print("Error: Failed connecting_signal")
 	pass # Replace with function body.
 
 func _on_new_game():
-	get_tree().change_scene_to(next_scene)
+	if get_tree().change_scene_to(next_scene) != 0:
+		print("Error: Failed starting Scene")
+		pass
 	pass
 
 func _on_quit():
