@@ -3,10 +3,17 @@ extends Node2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+export(int) var HP = 500
+
+func game_over():
+	get_tree().change_scene_to(global.title)
 
 func _enemy_entered_area(body):
 	if body.is_in_group("Enemy"):
 		print("Enemy_entered")
+		HP -= body.ATK
+		if HP <= 0:
+			game_over()
 	pass
 
 # Called when the node enters the scene tree for the first time.
