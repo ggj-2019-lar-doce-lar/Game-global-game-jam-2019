@@ -1,26 +1,24 @@
-extends KinematicBody2D
+extends Area2D
 
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-export(int) var HP = 10
-export(int) var ATK = 10
-export(int) var SPEED = 100
-
-var vel_vec = Vector2(SPEED, 0)
-
-func get_shot(damage):
-	HP -= damage
-	if HP <= 0:
-		queue_free()
-	pass
+onready var timer = $Timer
+var speed = 300
+var direction = Vector2(-1,0)
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	add_to_group("Enemy")
+	timer.connect("timeout",self,"queue_free")
+	connect("body_entered",self,"_enemy_entered")
 	pass # Replace with function body.
 
 func _process(delta):
-	move_and_slide(vel_vec)
+	position+=direction*speed*delta
+	pass
+	
+func _enemy_entered(body):
+	if body.is_in_group("Enemy"):
+		print("Found enemy")
 	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
