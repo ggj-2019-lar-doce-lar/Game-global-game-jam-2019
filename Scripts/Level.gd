@@ -18,6 +18,8 @@ func _enemy_entered_area(body):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$UI.set_max_life(HP)
+	$UI.set_max_cooldown($Aim.get_bullet_cooldown())
 	if $DefenseArea.connect("body_entered",self,"_enemy_entered_area") != 0:
 		print("Failed to connect signal")
 	pass
@@ -25,5 +27,7 @@ func _ready():
 	print(inimigos[0].tempos) # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
+func _process(delta):
+	$UI.set_life(HP)
+	$UI.set_cooldown($Aim.get_current_timer())
 #	pass

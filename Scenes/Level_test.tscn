@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Aim.tscn" type="PackedScene" id=2]
 [ext_resource path="res://icon.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/UI.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -31,4 +32,6 @@ texture = ExtResource( 3 )
 
 [node name="Enemy" parent="." instance=ExtResource( 4 )]
 position = Vector2( -8.35091, 260.548 )
+
+[node name="UI" parent="." instance=ExtResource( 5 )]
 
