@@ -2,18 +2,7 @@
 
 [ext_resource path="res://Scripts/Title.gd" type="Script" id=1]
 
-[sub_resource type="StyleBoxFlat" id=5]
-
-bg_color = Color( 0.34902, 0.34902, 0.34902, 1 )
-expand_margin_left = 10.0
-expand_margin_right = 10.0
-expand_margin_top = 5.0
-expand_margin_bottom = 5.0
-
 [sub_resource type="StyleBoxFlat" id=1]
-
-
-[sub_resource type="StyleBoxFlat" id=6]
 
 bg_color = Color( 0.34902, 0.34902, 0.34902, 1 )
 expand_margin_left = 10.0
@@ -24,7 +13,7 @@ expand_margin_bottom = 5.0
 [sub_resource type="StyleBoxFlat" id=2]
 
 
-[sub_resource type="StyleBoxFlat" id=4]
+[sub_resource type="StyleBoxFlat" id=3]
 
 bg_color = Color( 0.34902, 0.34902, 0.34902, 1 )
 expand_margin_left = 10.0
@@ -32,7 +21,18 @@ expand_margin_right = 10.0
 expand_margin_top = 5.0
 expand_margin_bottom = 5.0
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=4]
+
+
+[sub_resource type="StyleBoxFlat" id=5]
+
+bg_color = Color( 0.34902, 0.34902, 0.34902, 1 )
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id=6]
 
 
 [node name="Title" type="Node2D"]
@@ -43,8 +43,8 @@ margin_left = 362.0
 margin_top = 100.0
 margin_right = 662.0
 margin_bottom = 200.0
-custom_styles/hover = SubResource( 5 )
-custom_styles/normal = SubResource( 1 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Continue"
 
@@ -53,8 +53,8 @@ margin_left = 362.0
 margin_top = 225.0
 margin_right = 662.0
 margin_bottom = 325.0
-custom_styles/hover = SubResource( 6 )
-custom_styles/normal = SubResource( 2 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "New Game"
 
@@ -63,8 +63,8 @@ margin_left = 362.0
 margin_top = 350.0
 margin_right = 662.0
 margin_bottom = 450.0
-custom_styles/hover = SubResource( 4 )
-custom_styles/normal = SubResource( 3 )
+custom_styles/hover = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Quit"
 
