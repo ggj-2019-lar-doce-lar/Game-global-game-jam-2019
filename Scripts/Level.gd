@@ -23,7 +23,7 @@ func _enemy_entered_area(body):
 	if body.is_in_group("Enemy"):
 		print("Enemy_entered")
 		body.attack(self)
-		
+
 func get_hit(damage):
 	HP -= damage
 	if HP <= 0:
@@ -43,7 +43,7 @@ func _ready():
 	for enemy in inimigos:
 		enemy.tempos.sort()
 	print(inimigos)
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+	
 func _process(delta):
 	timer += delta
 	var num_enemies = global.enemy_list.size()
