@@ -21,7 +21,10 @@ var vel_vec = Vector2(-1, 0)
 func attack(obj):
 	player = obj
 	vel_vec = Vector2(0,0)
-	timer.start()
+	if timer.has_method("start"):
+		timer.start()
+	elif timer.has_method("play"):
+		timer.play("Attack")
 	pass
 
 func _timeout_attack():
@@ -37,10 +40,18 @@ func take_damage(damage):
 	pass
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	timer = Timer.new()
-	timer.wait_time = ATTACK_DELAY
-	add_child(timer)
-	timer.connect("timeout",self,"_timeout_attack")
+	var has_animation = false
+	for child in get_children():
+		if child.name == "AnimationPlayer":
+			has_animation = true
+			print("has_animation")
+	if not has_animation:
+		timer = Timer.new()
+		timer.wait_time = ATTACK_DELAY
+		add_child(timer)
+		timer.connect("timeout",self,"_timeout_attack")
+	else:
+		timer = $AnimationPlayer
 	$Area2D.add_to_group("Enemy")
 	life_bar.min_value = 0
 	life_bar.max_value = HP
