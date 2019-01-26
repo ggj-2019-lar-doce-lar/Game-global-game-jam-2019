@@ -5,6 +5,7 @@ signal level_end(win)
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+var temp_points = 0
 var inimigos
 var timer = 0
 export(int) var HP = 500
@@ -52,6 +53,7 @@ func _enemy_died(enemy):
 	current_enemy_list.erase(enemy)
 	print(current_enemy_list.size())
 	#Bote algo aqui
+	temp_points += enemy.POINTS
 	
 	enemy.queue_free()
 	pass
