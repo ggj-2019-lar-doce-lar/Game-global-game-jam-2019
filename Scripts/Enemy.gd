@@ -7,6 +7,7 @@ export(int) var HP = 10
 export(int) var ATK = 500
 export(int) var SPEED = 100
 export(float) var ATTACK_DELAY = 1.0
+export(int) var POINTS = 100
 
 var player
 var timer
