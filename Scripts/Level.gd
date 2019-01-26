@@ -46,6 +46,7 @@ func _ready():
 	inimigos = global.get_level_stuff()
 	print(inimigos)
 	if inimigos == null:
+		player.current_level = 0
 		get_tree().change_scene_to(global.title_scene)
 	else:
 		for enemy in inimigos:
