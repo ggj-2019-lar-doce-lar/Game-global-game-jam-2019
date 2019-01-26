@@ -1,9 +1,20 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/UI.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 [ext_resource path="res://Graphics/Shaders,/death_shader.shader" type="Shader" id=3]
 [ext_resource path="res://Graphics/FUNDOMORTE.png" type="Texture" id=4]
+
+[sub_resource type="StyleBoxFlat" id=2]
+
+bg_color = Color( 1, 1, 1, 1 )
+border_color = Color( 0, 0, 0, 1 )
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 10
 
 [sub_resource type="ShaderMaterial" id=1]
 
@@ -32,14 +43,15 @@ value = 100.0
 texture_progress = ExtResource( 2 )
 tint_progress = Color( 0.14902, 0, 1, 1 )
 
-[node name="LblPoints" type="Label" parent="."]
-modulate = Color( 1, 0, 0.819608, 1 )
+[node name="LblScore" type="Label" parent="."]
 self_modulate = Color( 0.945098, 0.890196, 0.890196, 1 )
 margin_left = 902.0
 margin_top = 63.0
 margin_right = 1003.0
 margin_bottom = 77.0
-text = "Points: 0"
+custom_styles/normal = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Score: 0"
 align = 1
 
 [node name="OptionButton" type="OptionButton" parent="."]
