@@ -6,12 +6,12 @@
 
 [sub_resource type="CircleShape2D" id=1]
 
-radius = 33.3218
+radius = 26.8211
 
 [sub_resource type="CapsuleShape2D" id=2]
 
-radius = 34.3602
-height = 155.06
+radius = 26.9958
+height = 103.268
 
 [sub_resource type="Animation" id=3]
 
@@ -24,7 +24,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5, 0.8 ),
+"times": PoolRealArray( 0, 0.5, 0.7 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( 38.8076, -16.245 ), Vector2( -35.1976, -10.83 ) ]
@@ -36,7 +36,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5, 0.8 ),
+"times": PoolRealArray( 0, 0.5, 0.7 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, -30.0, 30.0 ]
@@ -48,7 +48,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0.8 ),
+"times": PoolRealArray( 0.7 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
@@ -64,13 +64,13 @@ ATK = 50
 SPEED = 250
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 14.3052, -12.2637 )
-rotation = -0.261799
-scale = Vector2( 1, 2 )
+position = Vector2( 23.2846, -9.747 )
+rotation = -0.314159
+scale = Vector2( 0.7, 1.4 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 6.3175, 71.2975 )
+position = Vector2( 7.22001, 44.2224 )
 shape = SubResource( 1 )
 
 [node name="LifeBar" type="TextureProgress" parent="."]
@@ -85,6 +85,7 @@ texture_progress = ExtResource( 3 )
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 5.41501, -9.02502 )
 shape = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
