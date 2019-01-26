@@ -32,6 +32,16 @@ value = 100.0
 texture_progress = ExtResource( 2 )
 tint_progress = Color( 0.14902, 0, 1, 1 )
 
+[node name="LblPoints" type="Label" parent="."]
+modulate = Color( 1, 0, 0.819608, 1 )
+self_modulate = Color( 0.945098, 0.890196, 0.890196, 1 )
+margin_left = 902.0
+margin_top = 63.0
+margin_right = 1003.0
+margin_bottom = 77.0
+text = "Points: 0"
+align = 1
+
 [node name="OptionButton" type="OptionButton" parent="."]
 pause_mode = 2
 margin_left = 902.444
@@ -107,16 +117,6 @@ margin_top = 275.423
 margin_right = 638.305
 margin_bottom = 330.423
 text = "Quit"
-
-[node name="LblPoints" type="Label" parent="."]
-modulate = Color( 1, 0, 0.819608, 1 )
-self_modulate = Color( 0.945098, 0.890196, 0.890196, 1 )
-margin_left = 902.0
-margin_top = 63.0
-margin_right = 1003.0
-margin_bottom = 77.0
-text = "Points: 0"
-align = 1
 
 [connection signal="item_selected" from="OptionButton" to="." method="_on_OptionButton_item_selected" binds= [ 0 ]]
 [connection signal="pressed" from="OptionButton" to="." method="_on_OptionButton_pressed"]
