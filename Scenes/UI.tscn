@@ -80,6 +80,7 @@ disabled = true
 text = "Quit"
 
 [node name="ButtonWinNext" type="Button" parent="."]
+pause_mode = 2
 visible = false
 margin_left = 459.305
 margin_top = 145.299
@@ -89,6 +90,7 @@ disabled = true
 text = "Next Level"
 
 [node name="ButtonWinRestartCurrent" type="Button" parent="."]
+pause_mode = 2
 visible = false
 margin_left = 459.305
 margin_top = 210.669
@@ -98,6 +100,7 @@ disabled = true
 text = "Restart Level"
 
 [node name="ButtonWinQuit" type="Button" parent="."]
+pause_mode = 2
 visible = false
 margin_left = 459.305
 margin_top = 275.423

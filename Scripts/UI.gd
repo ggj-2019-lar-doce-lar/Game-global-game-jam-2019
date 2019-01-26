@@ -35,6 +35,7 @@ func set_cooldown(cd):
 	$ShotCooldown.value = cd*100
 
 func winner():
+	get_tree().paused = true
 	$OptionButton.disabled = true
 	$OptionButton.hide()
 	
@@ -85,6 +86,5 @@ func _on_ButtonDeathQuit_pressed():
 	pass # Replace with function body.
 
 func _on_ButtonWinNext_pressed():
-	get_tree().paused = true
 	pass # Replace with function body.
 
