@@ -1,12 +1,20 @@
 extends Node2D
 
+
+signal level_end(win)
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 var inimigos
 var timer = 0
-var current_level = 0
 export(int) var HP = 500
+
+func set_paused(val):
+	set_process(not val)
+	for child in get_children():
+		if child.has_method("set_paused"):
+			child.set_paused(val)
+
 
 const enemy_spawn = [Vector2(1100, 290),Vector2(1100, 500)]
 func get_random_enemy_position():
@@ -16,8 +24,17 @@ func get_random_enemy_position():
 func change_level(level):
 	pass
 
+var pause_status = false
+var toggle
+func _input(event):
+	if event.is_action("pause_action") and event.is_action_pressed("pause_action"):
+		pause_status = not pause_status
+		set_paused(pause_status)
+		pass
+	pass
+
 func game_over():
-	get_tree().change_scene_to(global.title)
+	get_tree().change_scene_to(global.title_scene)
 
 func _enemy_entered_area(body):
 	if body.is_in_group("Enemy"):
@@ -38,7 +55,7 @@ func _ready():
 	if $DefenseArea.connect("body_entered",self,"_enemy_entered_area") != 0:
 		print("Failed to connect signal")
 	pass
-	inimigos = global.retorna_fase("res://Scenes/Levels/level_0.json")
+	inimigos = global.get_level_stuff()
 	print(inimigos)
 	for enemy in inimigos:
 		enemy.tempos.sort()

@@ -4,9 +4,17 @@ extends Area2D
 # var a = 2
 # var b = "text"
 onready var timer = $Timer
-var speed = 300
+export(int) var speed = 500
 var direction = Vector2(-1,0)
 var damage = 5
+
+
+func set_paused(val):
+	set_process(not val)
+	timer.set_paused(val)
+	for child in get_children():
+		if child.has_method("set_paused"):
+			child.set_paused(val)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	timer.connect("timeout",self,"queue_free")

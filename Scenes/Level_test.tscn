@@ -22,6 +22,7 @@ centered = false
 
 [node name="Aim" parent="." instance=ExtResource( 3 )]
 position = Vector2( 95.1885, 248.116 )
+timer_delay = 0.8
 
 [node name="ph_child" type="Sprite" parent="Aim"]
 position = Vector2( -18.4688, 64.9713 )
@@ -34,7 +35,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DefenseArea"]
-position = Vector2( 68.9009, 206.703 )
+position = Vector2( -0.817665, 194.4 )
 rotation = 0.610865
 shape = SubResource( 1 )
 

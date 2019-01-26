@@ -12,7 +12,7 @@ func _ready():
 	pass # Replace with function body.
 
 func _on_new_game():
-	if get_tree().change_scene_to(global.level) != 0:
+	if get_tree().change_scene_to(global.level_scene) != 0:
 		print("Error: Failed to start Scene")
 		pass
 	pass

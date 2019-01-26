@@ -6,9 +6,18 @@ var aim_enabled = true
 var can_shoot = true
 onready var sprite = $AimSprite
 onready var timer = $Timer
+
+export(float) var timer_delay = 0.5
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+func set_paused(val):
+	set_process(not val)
+	timer.set_paused(val)
+	for child in get_children():
+		if child.has_method("set_paused"):
+			child.set_paused(val)
+
 func _on_end_cooldown():
 	can_shoot = true
 
@@ -23,6 +32,7 @@ func get_current_timer():
 	return timer.wait_time - timer.get_time_left()
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	timer.wait_time = timer_delay
 	timer.connect("timeout",self,"_on_end_cooldown")
 	pass # Replace with function body.
 
