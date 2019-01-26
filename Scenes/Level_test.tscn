@@ -15,7 +15,6 @@ extents = Vector2( 65.4183, 153.362 )
 
 [node name="Level_test" type="Node2D"]
 script = ExtResource( 1 )
-HP = null
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -60.9508, -121.902 )

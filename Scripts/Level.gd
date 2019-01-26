@@ -31,7 +31,7 @@ func _ready():
 		if (int(inimigos[i].id) == 0):
 			var inimigo0 = inimigos[i].times
 		elif(int(inimigos[i].id) == 1):
-			var inimigo1 =
+			var inimigo1 = inimigos[i].times
 		pass
 		 # Replace with function body.
 
