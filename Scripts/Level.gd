@@ -52,7 +52,7 @@ func _ready():
 
 func _enemy_died(enemy):
 	current_enemy_list.erase(enemy)
-	
+	print(current_enemy_list.size())
 	#Bote algo aqui
 	
 	enemy.queue_free()
@@ -74,6 +74,10 @@ func _process(delta):
 					add_child(new_enemy)
 					new_enemy.position = get_random_enemy_position()
 				pass
+		pass
+	if acabou and current_enemy_list.size() == 0:
+		print("Ganhou")
+		#Ganhou aqui
 		pass
 	$UI.set_life(HP)
 	$UI.set_cooldown($Aim.get_current_timer())
