@@ -7,7 +7,7 @@ onready var timer = $Timer
 export(int) var speed = 500
 var direction = Vector2(-1,0)
 var damage = 5
-
+var normal = Vector2(0,-1)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,6 +16,7 @@ func _ready():
 	pass # Replace with function body.
 
 func _process(delta):
+	rotation = -direction.angle_to(normal)
 	position+=direction*speed*delta
 	pass
 	
