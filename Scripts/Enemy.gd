@@ -11,7 +11,7 @@ export(float) var ATTACK_DELAY = 1.0
 var player
 var timer
 
-
+signal died()
 
 
 onready var life_bar = $LifeBar
@@ -30,7 +30,9 @@ func take_damage(damage):
 	HP -= damage
 	life_bar.value = HP
 	if HP <= 0:
-		queue_free()
+		emit_signal("died")
+		hide()
+		set_process(false)
 	pass
 # Called when the node enters the scene tree for the first time.
 func _ready():

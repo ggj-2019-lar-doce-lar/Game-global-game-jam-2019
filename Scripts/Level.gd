@@ -9,6 +9,7 @@ var inimigos
 var timer = 0
 export(int) var HP = 500
 
+var current_enemy_list = []
 
 const enemy_spawn = [Vector2(1100, 290),Vector2(1100, 500)]
 func get_random_enemy_position():
@@ -47,17 +48,27 @@ func _ready():
 		enemy.tempos.sort()
 	print(inimigos)
 
+func _enemy_died(enemy):
+	current_enemy_list.erase(enemy)
+	
+	#Bote algo aqui
+	
+	enemy.queue_free()
+	pass
+
 func _process(delta):
 	timer += delta
 	var num_enemies = global.enemy_list.size()
 	var acabou = true
 	for enemy in inimigos:
 		if enemy.id < num_enemies:
-			acabou = false
 			if enemy.tempos.size() > 0:
+				acabou = false
 				if enemy.tempos[0] <= timer:
 					enemy.tempos.remove(0)
 					var new_enemy = global.enemy_list[enemy.id].instance()
+					current_enemy_list.append(new_enemy)
+					new_enemy.connect("died",self,"_enemy_died",[new_enemy])
 					add_child(new_enemy)
 					new_enemy.position = get_random_enemy_position()
 				pass
