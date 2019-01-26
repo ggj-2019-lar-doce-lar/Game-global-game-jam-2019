@@ -1,18 +1,23 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Enemies/Enemy0.gd" type="Script" id=1]
 [ext_resource path="res://Graphics/ph_ghost.png" type="Texture" id=2]
 [ext_resource path="res://icon.png" type="Texture" id=3]
 
-[sub_resource type="CapsuleShape2D" id=1]
+[sub_resource type="CircleShape2D" id=1]
+
+radius = 33.3218
+
+[sub_resource type="CapsuleShape2D" id=2]
 
 radius = 34.3602
 height = 155.06
 
 [node name="Enemy" type="KinematicBody2D"]
-collision_mask = 0
+collision_mask = 2
 script = ExtResource( 1 )
 HP = 5
+ATK = 50
 SPEED = 250
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -20,6 +25,7 @@ scale = Vector2( 1, 2 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 6.3175, 71.2975 )
 shape = SubResource( 1 )
 
 [node name="LifeBar" type="TextureProgress" parent="."]
@@ -30,4 +36,9 @@ margin_bottom = 23.2304
 rect_scale = Vector2( 0.747565, 0.0663369 )
 value = 50.0
 texture_progress = ExtResource( 3 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 2 )
 
