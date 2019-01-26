@@ -27,7 +27,6 @@ config/icon="res://icon.png"
 [autoload]
 
 global="*res://Scripts/global.gd"
-player="*res://Scripts/player.gd"
 
 [display]
 

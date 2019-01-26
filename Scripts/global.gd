@@ -20,7 +20,7 @@ func _ready():
 
 
 func get_level_stuff():
-	return retorna_fase("res://Scenes/Levels/level_0.json")
+	return retorna_fase("res://Scenes/Levels/level_2.json")
 	pass
 
 func retorna_fase(caminho):
