@@ -8,7 +8,7 @@ export(int) var ATK = 500
 export(int) var SPEED = 100
 
 onready var life_bar = $LifeBar
-var vel_vec = Vector2(SPEED, 0)
+var vel_vec = Vector2(-1, 0)
 
 func take_damage(damage):
 	HP -= damage
@@ -25,7 +25,7 @@ func _ready():
 	pass # Replace with function body.
 
 func _process(delta):
-	move_and_slide(-vel_vec)
+	move_and_slide(vel_vec*SPEED)
 	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

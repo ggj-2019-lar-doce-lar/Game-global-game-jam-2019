@@ -1,12 +1,13 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://Graphics/quarto.jpg" type="Texture" id=2]
 [ext_resource path="res://Scenes/Aim.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Graphics/ph_child.png" type="Texture" id=4]
 [ext_resource path="res://Graphics/ph_muro.png" type="Texture" id=5]
-[ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/UI.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/UI.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Enemies/Enemy0.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Enemies/Enemy1.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -44,8 +45,11 @@ position = Vector2( 5.32635, 156.395 )
 scale = Vector2( 1.37165, 1.38033 )
 texture = ExtResource( 5 )
 
-[node name="Enemy" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1064.41, 277.816 )
+[node name="UI" parent="." instance=ExtResource( 6 )]
 
-[node name="UI" parent="." instance=ExtResource( 7 )]
+[node name="Enemy2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1079.54, 276.161 )
+
+[node name="Enemy" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1082.33, 477.006 )
 
