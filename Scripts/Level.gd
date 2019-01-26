@@ -55,8 +55,8 @@ func _process(delta):
 	var acabou = true
 	for enemy in inimigos:
 		if enemy.id < num_enemies:
-			acabou = false
 			if enemy.tempos.size() > 0:
+				acabou = false
 				if enemy.tempos[0] <= timer:
 					enemy.tempos.remove(0)
 					var new_enemy = global.enemy_list[enemy.id].instance()
