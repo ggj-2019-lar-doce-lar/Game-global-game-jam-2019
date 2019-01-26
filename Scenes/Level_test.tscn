@@ -30,6 +30,7 @@ position = Vector2( -18.4688, 64.9713 )
 texture = ExtResource( 4 )
 
 [node name="DefenseArea" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 173.66, 227.573 )
 __meta__ = {
 "_edit_group_": true

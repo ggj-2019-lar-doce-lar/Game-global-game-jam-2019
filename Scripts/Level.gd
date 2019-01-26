@@ -7,7 +7,7 @@ export(int) var HP = 500
 
 func game_over():
 	get_tree().change_scene_to(global.title)
-
+	
 func _enemy_entered_area(body):
 	if body.is_in_group("Enemy"):
 		print("Enemy_entered")
@@ -40,3 +40,5 @@ func _process(delta):
 	$UI.set_life(HP)
 	$UI.set_cooldown($Aim.get_current_timer())
 #	pass
+
+
