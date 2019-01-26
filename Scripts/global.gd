@@ -9,7 +9,6 @@ var enemy_list = [preload("res://Scenes/Enemies/Enemy0.tscn"),
 var title_scene = preload("res://Scenes/Title.tscn")
 var level_scene = preload("res://Scenes/Level_test.tscn")
 
-var current_level = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -20,7 +19,8 @@ func _ready():
 
 
 func get_level_stuff():
-	return retorna_fase("res://Scenes/Levels/level_2.json")
+	
+	return retorna_fase("res://Scenes/Levels/level_"+str(player.current_level)+".json")
 	pass
 
 func retorna_fase(caminho):
