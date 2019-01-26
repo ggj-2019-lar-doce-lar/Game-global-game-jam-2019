@@ -48,7 +48,7 @@ func winner():
 func game_over():
 	
 	get_tree().paused = true
-	
+	$FUNDOMORTE.show()
 	$OptionButton.disabled = true
 	$OptionButton.hide()
 	
