@@ -38,7 +38,7 @@ func _ready():
 	if $DefenseArea.connect("body_entered",self,"_enemy_entered_area") != 0:
 		print("Failed to connect signal")
 	pass
-	inimigos = global.retorna_fase("res://Scenes/Levels/level_0.gd")
+	inimigos = global.retorna_fase("res://Scenes/Levels/level_0.json")
 	print(inimigos)
 	for enemy in inimigos:
 		enemy.tempos.sort()
