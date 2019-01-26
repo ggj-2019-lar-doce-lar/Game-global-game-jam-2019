@@ -11,7 +11,7 @@ func game_over():
 func _enemy_entered_area(body):
 	if body.is_in_group("Enemy"):
 		print("Enemy_entered")
-		body.attack()
+		body.attack(self)
 		
 func get_hit(damage):
 	HP -= damage
