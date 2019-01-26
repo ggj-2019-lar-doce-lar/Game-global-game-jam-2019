@@ -76,6 +76,8 @@ func _process(delta):
 	if acabou and current_enemy_list.size() == 0:
 		print("Ganhou")
 		#Ganhou aqui
+		$UI.winner()
+		
 		pass
 	$UI.set_life(HP)
 	$UI.set_cooldown($Aim.get_current_timer())

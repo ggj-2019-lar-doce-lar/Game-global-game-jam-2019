@@ -34,6 +34,17 @@ func set_max_cooldown(max_cd):
 func set_cooldown(cd):
 	$ShotCooldown.value = cd*100
 
+func winner():
+	$OptionButton.disabled = true
+	$OptionButton.hide()
+	
+	$ButtonWinNext.disabled = false
+	$ButtonWinNext.show()
+	$ButtonWinRestartCurrent.disabled = false
+	$ButtonWinRestartCurrent.show()
+	$ButtonWinQuit.disabled = false
+	$ButtonWinQuit.show()
+
 func game_over():
 	
 	get_tree().paused = true
@@ -72,3 +83,8 @@ func _on_ButtonDeathUpgrades_pressed():
 func _on_ButtonDeathQuit_pressed():
 	game_quit()
 	pass # Replace with function body.
+
+func _on_ButtonWinNext_pressed():
+	get_tree().paused = true
+	pass # Replace with function body.
+

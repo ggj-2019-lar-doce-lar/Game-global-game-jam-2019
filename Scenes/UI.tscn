@@ -67,8 +67,37 @@ margin_bottom = 394.075
 disabled = true
 text = "Quit"
 
+[node name="ButtonWinNext" type="Button" parent="."]
+visible = false
+margin_left = 459.305
+margin_top = 145.299
+margin_right = 638.305
+margin_bottom = 200.299
+disabled = true
+text = "Next Level"
+
+[node name="ButtonWinRestartCurrent" type="Button" parent="."]
+visible = false
+margin_left = 459.305
+margin_top = 210.669
+margin_right = 638.305
+margin_bottom = 265.669
+disabled = true
+text = "Restart Level"
+
+[node name="ButtonWinQuit" type="Button" parent="."]
+visible = false
+margin_left = 459.305
+margin_top = 275.423
+margin_right = 638.305
+margin_bottom = 330.423
+text = "Quit"
+
 [connection signal="item_selected" from="OptionButton" to="." method="_on_OptionButton_item_selected" binds= [ 0 ]]
 [connection signal="pressed" from="OptionButton" to="." method="_on_OptionButton_pressed"]
 [connection signal="pressed" from="ButtonDeathRestart" to="." method="_on_ButtonDeathRestart_pressed"]
 [connection signal="pressed" from="ButtonDeathUpgrades" to="." method="_on_ButtonDeathUpgrades_pressed"]
 [connection signal="pressed" from="ButtonDeathQuit" to="." method="_on_ButtonDeathQuit_pressed"]
+[connection signal="pressed" from="ButtonWinNext" to="." method="_on_ButtonWinNext_pressed"]
+[connection signal="pressed" from="ButtonWinRestartCurrent" to="." method="_on_ButtonDeathRestart_pressed"]
+[connection signal="pressed" from="ButtonWinQuit" to="." method="_on_ButtonDeathQuit_pressed"]
