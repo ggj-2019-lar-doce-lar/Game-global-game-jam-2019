@@ -5,7 +5,7 @@ func _ready():
 	
 func game_quit():
 	get_tree().paused = false
-	get_tree().change_scene_to(global.title)	
+	get_tree().change_scene_to(global.title_scene)	
 		
 func game_pause():
 	if(get_tree().paused == true):
