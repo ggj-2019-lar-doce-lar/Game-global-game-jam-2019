@@ -20,6 +20,10 @@ func game_restart():
 	get_tree().paused = false
 	get_tree().reload_current_scene()
 
+func set_points(valor):
+	$LblPoints.text = "Points: "+str(valor)
+	pass
+
 func set_max_life(max_life):
 	$LifeBar.max_value = max_life*100
 	$LifeBar.value = max_life*100

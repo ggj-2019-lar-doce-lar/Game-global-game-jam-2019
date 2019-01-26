@@ -83,4 +83,5 @@ func _process(delta):
 		pass
 	$UI.set_life(HP)
 	$UI.set_cooldown($Aim.get_current_timer())
+	$UI.set_points(temp_points)
 #	pass
