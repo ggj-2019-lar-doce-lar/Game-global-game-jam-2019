@@ -3,7 +3,18 @@ extends Node2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+var inimigos
+var timer = 0
+var current_level = 0
 export(int) var HP = 500
+
+const enemy_spawn = [Vector2(1100, 290),Vector2(1100, 500)]
+func get_random_enemy_position():
+	return enemy_spawn[0] + randf()*(enemy_spawn[1] - enemy_spawn[0])
+	pass
+
+func change_level(level):
+	pass
 
 func game_over():
 	get_tree().change_scene_to(global.title)
@@ -12,7 +23,7 @@ func _enemy_entered_area(body):
 	if body.is_in_group("Enemy"):
 		print("Enemy_entered")
 		body.attack(self)
-		
+
 func get_hit(damage):
 	HP -= damage
 	if HP <= 0:
@@ -21,22 +32,33 @@ func get_hit(damage):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	randomize()
 	$UI.set_max_life(HP)
 	$UI.set_max_cooldown($Aim.get_bullet_cooldown())
 	if $DefenseArea.connect("body_entered",self,"_enemy_entered_area") != 0:
 		print("Failed to connect signal")
 	pass
-	var inimigos = global.retorna_fase("res://Scenes/Levels/test.gd")
-	for i in range(2):
-		if (int(inimigos[i].id) == 0):
-			var inimigo0 = inimigos[i].times
-		elif(int(inimigos[i].id) == 1):
-			var inimigo1 = inimigos[i].times
-		pass
-		 # Replace with function body.
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+	inimigos = global.retorna_fase("res://Scenes/Levels/level_0.json")
+	print(inimigos)
+	for enemy in inimigos:
+		enemy.tempos.sort()
+	print(inimigos)
+	
 func _process(delta):
+	timer += delta
+	var num_enemies = global.enemy_list.size()
+	var acabou = true
+	for enemy in inimigos:
+		if enemy.id < num_enemies:
+			acabou = false
+			if enemy.tempos.size() > 0:
+				if enemy.tempos[0] <= timer:
+					enemy.tempos.remove(0)
+					var new_enemy = global.enemy_list[enemy.id].instance()
+					add_child(new_enemy)
+					new_enemy.position = get_random_enemy_position()
+				pass
+		pass
 	$UI.set_life(HP)
 	$UI.set_cooldown($Aim.get_current_timer())
 #	pass

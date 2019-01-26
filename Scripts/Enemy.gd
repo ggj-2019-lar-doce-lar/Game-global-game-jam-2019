@@ -34,6 +34,7 @@ func take_damage(damage):
 	pass
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$Area2D.add_to_group("Enemy")
 	life_bar.min_value = 0
 	life_bar.max_value = HP
 	life_bar.value = HP

@@ -3,7 +3,6 @@ extends Node2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-var next_scene = preload("res://Scenes/Level_test.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if $Start.connect("pressed",self,"_on_new_game") != 0:
@@ -13,8 +12,8 @@ func _ready():
 	pass # Replace with function body.
 
 func _on_new_game():
-	if get_tree().change_scene_to(next_scene) != 0:
-		print("Error: Failed starting Scene")
+	if get_tree().change_scene_to(global.level) != 0:
+		print("Error: Failed to start Scene")
 		pass
 	pass
 
