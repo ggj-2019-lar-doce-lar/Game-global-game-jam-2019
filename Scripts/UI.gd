@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+var points = 0
+
 func _ready():
 	pass
 	
@@ -22,6 +24,7 @@ func game_restart():
 
 func set_points(valor):
 	$LblPoints.text = "Points: "+str(valor)
+	points = valor
 	pass
 
 func set_max_life(max_life):
@@ -90,5 +93,8 @@ func _on_ButtonDeathQuit_pressed():
 	pass # Replace with function body.
 
 func _on_ButtonWinNext_pressed():
+	player.current_level += 1
+	player.points += points
+	game_restart()
 	pass # Replace with function body.
 

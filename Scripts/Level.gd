@@ -45,8 +45,11 @@ func _ready():
 	pass
 	inimigos = global.get_level_stuff()
 	print(inimigos)
-	for enemy in inimigos:
-		enemy.tempos.sort()
+	if inimigos == null:
+		get_tree().change_scene_to(global.title_scene)
+	else:
+		for enemy in inimigos:
+			enemy.tempos.sort()
 	print(inimigos)
 
 func _enemy_died(enemy):
