@@ -10,13 +10,7 @@ onready var timer = $Timer
 export(float) var timer_delay = 0.5
 # Declare member variables here. Examples:
 # var a = 2
-# var b = "text"
-func set_paused(val):
-	set_process(not val)
-	timer.set_paused(val)
-	for child in get_children():
-		if child.has_method("set_paused"):
-			child.set_paused(val)
+
 
 func _on_end_cooldown():
 	can_shoot = true

@@ -9,12 +9,6 @@ var inimigos
 var timer = 0
 export(int) var HP = 500
 
-func set_paused(val):
-	set_process(not val)
-	for child in get_children():
-		if child.has_method("set_paused"):
-			child.set_paused(val)
-
 
 const enemy_spawn = [Vector2(1100, 290),Vector2(1100, 500)]
 func get_random_enemy_position():
@@ -26,12 +20,6 @@ func change_level(level):
 
 var pause_status = false
 var toggle
-func _input(event):
-	if event.is_action("pause_action") and event.is_action_pressed("pause_action"):
-		pause_status = not pause_status
-		set_paused(pause_status)
-		pass
-	pass
 
 func game_over():
 	get_tree().change_scene_to(global.title_scene)
@@ -60,7 +48,7 @@ func _ready():
 	for enemy in inimigos:
 		enemy.tempos.sort()
 	print(inimigos)
-	
+
 func _process(delta):
 	timer += delta
 	var num_enemies = global.enemy_list.size()

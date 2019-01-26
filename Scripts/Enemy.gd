@@ -11,12 +11,7 @@ export(float) var ATTACK_DELAY = 1.0
 var player
 var timer
 
-func set_paused(val):
-	set_process(not val)
-	timer.set_paused(val)
-	for child in get_children():
-		if child.has_method("set_paused"):
-			child.set_paused(val)
+
 
 
 onready var life_bar = $LifeBar
