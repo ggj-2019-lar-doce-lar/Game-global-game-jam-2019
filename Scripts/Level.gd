@@ -11,9 +11,12 @@ func game_over():
 func _enemy_entered_area(body):
 	if body.is_in_group("Enemy"):
 		print("Enemy_entered")
-		HP -= body.ATK
-		if HP <= 0:
-			game_over()
+		body.attack()
+		
+func get_hit(damage):
+	HP -= damage
+	if HP <= 0:
+		game_over()
 	pass
 
 # Called when the node enters the scene tree for the first time.
