@@ -20,7 +20,9 @@ func _enemy_entered_area(body):
 func _ready():
 	if $DefenseArea.connect("body_entered",self,"_enemy_entered_area") != 0:
 		print("Failed to connect signal")
-	pass # Replace with function body.
+	pass
+	var inimigos = global.retorna_fase("res://Scenes/Levels/inimigos.gd")
+	print(inimigos[0].tempos) # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
