@@ -12,3 +12,16 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+func retorna_fase(caminho):
+	var file = File.new()
+	file.open(caminho, file.READ)
+	var content = file.get_as_text()
+	file.close()
+	var lista = JSON.parse(content)
+	if (lista.result):
+		return lista.result
+	else:
+		print("Error: wrong JSON format, Screwed up loser")
+		return null
+	
+	
