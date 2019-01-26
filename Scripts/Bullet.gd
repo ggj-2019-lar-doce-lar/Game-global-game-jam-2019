@@ -16,6 +16,7 @@ func _ready():
 	pass # Replace with function body.
 
 func _process(delta):
+	show()
 	rotation = -direction.angle_to(normal)
 	position+=direction*speed*delta
 	pass

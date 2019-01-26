@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/UI.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
-[ext_resource path="res://Graphics/Shaders,/death_shader.shader" type="Shader" id=3]
-[ext_resource path="res://Graphics/FUNDOMORTE.png" type="Texture" id=4]
+[ext_resource path="res://Graphics/life_bar.png" type="Texture" id=2]
+[ext_resource path="res://Graphics/shoot_bar.png" type="Texture" id=3]
+[ext_resource path="res://Graphics/Shaders,/death_shader.shader" type="Shader" id=4]
+[ext_resource path="res://Graphics/FUNDOMORTE.png" type="Texture" id=5]
 
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxFlat" id=1]
 
 bg_color = Color( 1, 1, 1, 1 )
 border_color = Color( 0, 0, 0, 1 )
@@ -16,31 +17,32 @@ corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 corner_detail = 10
 
-[sub_resource type="ShaderMaterial" id=1]
+[sub_resource type="ShaderMaterial" id=2]
 
-shader = ExtResource( 3 )
+shader = ExtResource( 4 )
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource( 1 )
 
 [node name="LifeBar" type="TextureProgress" parent="."]
-margin_left = 74.0
-margin_top = 23.0
-margin_right = 138.0
-margin_bottom = 87.0
-rect_scale = Vector2( 6, 0.5 )
+margin_left = 20.0
+margin_top = 34.0
+margin_right = 1044.0
+margin_bottom = 610.0
+rect_scale = Vector2( 0.361, 0.068 )
+rect_pivot_offset = Vector2( 0.26, 0 )
 value = 100.0
 texture_progress = ExtResource( 2 )
 tint_progress = Color( 1, 0, 0, 1 )
 
 [node name="ShotCooldown" type="TextureProgress" parent="."]
-margin_left = 74.9886
-margin_top = 70.124
-margin_right = 138.989
-margin_bottom = 134.124
-rect_scale = Vector2( 6, 0.5 )
+margin_left = 20.0
+margin_top = 89.178
+margin_right = 1044.0
+margin_bottom = 665.178
+rect_scale = Vector2( 0.361, 0.068 )
 value = 100.0
-texture_progress = ExtResource( 2 )
+texture_progress = ExtResource( 3 )
 tint_progress = Color( 0.14902, 0, 1, 1 )
 
 [node name="LblScore" type="Label" parent="."]
@@ -49,7 +51,7 @@ margin_left = 902.0
 margin_top = 63.0
 margin_right = 1003.0
 margin_bottom = 77.0
-custom_styles/normal = SubResource( 2 )
+custom_styles/normal = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Score: 0"
 align = 1
@@ -67,8 +69,8 @@ selected = 0
 
 [node name="FUNDOMORTE" type="Sprite" parent="."]
 visible = false
-material = SubResource( 1 )
-texture = ExtResource( 4 )
+material = SubResource( 2 )
+texture = ExtResource( 5 )
 centered = false
 
 [node name="ButtonDeathRestart" type="Button" parent="."]
