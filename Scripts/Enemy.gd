@@ -6,9 +6,25 @@ class_name Enemy
 export(int) var HP = 10
 export(int) var ATK = 500
 export(int) var SPEED = 100
+export(float) var ATTACK_DELAY = 1.0
+
+var player
 
 onready var life_bar = $LifeBar
 var vel_vec = Vector2(-1, 0)
+
+func attack(obj):
+	player = obj
+	vel_vec = Vector2(0,0)
+	var timer = Timer.new()
+	timer.wait_time = ATTACK_DELAY
+	add_child(timer)
+	timer.connect("timeout",self,"_timeout_attack")
+	timer.start()
+	pass
+
+func _timeout_attack():
+	player.get_hit(ATK)
 
 func take_damage(damage):
 	HP -= damage
