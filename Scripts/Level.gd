@@ -22,9 +22,6 @@ func change_level(level):
 var pause_status = false
 var toggle
 
-func game_over():
-	get_tree().change_scene_to(global.title_scene)
-
 func _enemy_entered_area(body):
 	if body.is_in_group("Enemy"):
 		print("Enemy_entered")
@@ -33,7 +30,8 @@ func _enemy_entered_area(body):
 func get_hit(damage):
 	HP -= damage
 	if HP <= 0:
-		game_over()
+	  $UI.set_life(0)
+	  $UI.game_over()
 	pass
 
 # Called when the node enters the scene tree for the first time.
