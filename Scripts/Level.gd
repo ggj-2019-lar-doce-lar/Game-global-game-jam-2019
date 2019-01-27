@@ -116,7 +116,6 @@ func _ready():
 	else:
 		barrier_hp = barrier_max_hp
 		$Barrier.connect("body_entered",self,"_enemy_entered_barrier")
-	$WinTimer.connect("timeout",self,"winner")
 	
 	$UI.set_max_life(HP)
 	
@@ -164,7 +163,7 @@ func _process(delta):
 		$Aim.can_shoot = false
 		#Ganhou aqui
 		won = true
-		$WinTimer.start()
+		$Aim/AnimationPlayer.play("Yay")
 		
 		pass
 	$UI.set_life(HP)
