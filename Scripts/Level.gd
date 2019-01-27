@@ -98,6 +98,7 @@ func _process(delta):
 		pass
 	if acabou and current_enemy_list.size() == 0:
 		print("Ganhou")
+		$Aim.can_shoot = false
 		#Ganhou aqui
 		$UI.winner()
 		
