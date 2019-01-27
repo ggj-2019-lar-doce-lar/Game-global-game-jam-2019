@@ -5,7 +5,6 @@
 [ext_resource path="res://Graphics/tela_inicial_fundo/tela_inicial_01.png" type="Texture" id=3]
 [ext_resource path="res://Músicas/GGJ_2019_ghost-house_pianinho.wav" type="AudioStream" id=4]
 
-
 [node name="Title" type="Control"]
 theme = ExtResource( 1 )
 script = ExtResource( 2 )
@@ -16,12 +15,11 @@ scale = Vector2( 0.846108, 0.872555 )
 texture = ExtResource( 3 )
 
 [node name="Continue" type="Button" parent="."]
-
 margin_left = 680.0
 margin_top = 40.0
 margin_right = 980.0
 margin_bottom = 140.0
-
+theme = ExtResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Continue"
 
@@ -46,3 +44,4 @@ stream = ExtResource( 4 )
 volume_db = -27.263
 autoplay = true
 mix_target = 1
+
