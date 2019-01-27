@@ -81,13 +81,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -89.5
-margin_top = -87.5
-margin_right = 89.5
-margin_bottom = -32.5
+margin_left = -89.0
+margin_top = -87.0
+margin_right = 149.0
+margin_bottom = -31.0
 theme = ExtResource( 5 )
 disabled = true
-text = "Restart"
+text = "    Restart     "
 
 [node name="ButtonDeathUpgrades" type="Button" parent="."]
 pause_mode = 2
@@ -95,13 +95,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -89.5
-margin_top = -27.5
-margin_right = 89.5
-margin_bottom = 27.5
+margin_left = -89.0
+margin_top = -27.0
+margin_right = 149.0
+margin_bottom = 29.0
 theme = ExtResource( 5 )
 disabled = true
-text = "Upgrades"
+text = "  Upgrades   "
 
 [node name="ButtonDeathQuit" type="Button" parent="."]
 pause_mode = 2
@@ -109,13 +109,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -89.5
-margin_top = 32.5
-margin_right = 89.5
-margin_bottom = 87.5
+margin_left = -89.0
+margin_top = 33.0
+margin_right = 148.0
+margin_bottom = 89.0
 theme = ExtResource( 5 )
 disabled = true
-text = "Quit"
+text = "      Quit      "
 
 [node name="LblScore2" type="Label" parent="."]
 visible = false

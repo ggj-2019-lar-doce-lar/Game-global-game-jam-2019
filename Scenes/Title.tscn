@@ -1,78 +1,46 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Graphics/Themes/Upgrades.tres" type="Theme" id=1]
 [ext_resource path="res://Scripts/Title.gd" type="Script" id=2]
-[ext_resource path="res://Músicas/GGJ_2019_ghost-house_pianinho.wav" type="AudioStream" id=3]
-
-[sub_resource type="StyleBoxFlat" id=1]
-
-bg_color = Color( 0.34902, 0.34902, 0.34902, 1 )
-expand_margin_left = 10.0
-expand_margin_right = 10.0
-expand_margin_top = 5.0
-expand_margin_bottom = 5.0
-
-[sub_resource type="StyleBoxFlat" id=2]
-
-
-[sub_resource type="StyleBoxFlat" id=3]
-
-bg_color = Color( 0.34902, 0.34902, 0.34902, 1 )
-expand_margin_left = 10.0
-expand_margin_right = 10.0
-expand_margin_top = 5.0
-expand_margin_bottom = 5.0
-
-[sub_resource type="StyleBoxFlat" id=4]
-
-
-[sub_resource type="StyleBoxFlat" id=5]
-
-bg_color = Color( 0.34902, 0.34902, 0.34902, 1 )
-expand_margin_left = 10.0
-expand_margin_right = 10.0
-expand_margin_top = 5.0
-expand_margin_bottom = 5.0
-
-[sub_resource type="StyleBoxFlat" id=6]
-
+[ext_resource path="res://Graphics/tela_inicial_fundo/tela_inicial_01.png" type="Texture" id=3]
+[ext_resource path="res://Músicas/GGJ_2019_ghost-house_pianinho.wav" type="AudioStream" id=4]
 
 [node name="Title" type="Control"]
 theme = ExtResource( 1 )
 script = ExtResource( 2 )
 
+[node name="tela_inicial_01" type="Sprite" parent="."]
+position = Vector2( 512.991, 281.881 )
+scale = Vector2( 0.846108, 0.872555 )
+texture = ExtResource( 3 )
+
 [node name="Continue" type="Button" parent="."]
-margin_left = 362.0
-margin_top = 100.0
-margin_right = 662.0
-margin_bottom = 200.0
-custom_styles/hover = SubResource( 1 )
-custom_styles/normal = SubResource( 2 )
+margin_left = 680.0
+margin_top = 40.0
+margin_right = 980.0
+margin_bottom = 140.0
+theme = ExtResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Continue"
 
 [node name="Start" type="Button" parent="."]
-margin_left = 362.0
-margin_top = 225.0
-margin_right = 662.0
-margin_bottom = 325.0
-custom_styles/hover = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
+margin_left = 680.0
+margin_top = 170.0
+margin_right = 980.0
+margin_bottom = 270.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "New Game"
 
 [node name="Quit" type="Button" parent="."]
-margin_left = 362.0
-margin_top = 350.0
-margin_right = 662.0
-margin_bottom = 450.0
-custom_styles/hover = SubResource( 5 )
-custom_styles/normal = SubResource( 6 )
+margin_left = 680.0
+margin_top = 300.0
+margin_right = 980.0
+margin_bottom = 400.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Quit"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 3 )
+stream = ExtResource( 4 )
 volume_db = -27.263
 autoplay = true
 mix_target = 1

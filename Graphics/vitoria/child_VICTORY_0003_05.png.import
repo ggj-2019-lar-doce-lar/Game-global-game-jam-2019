@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tela_inicial_05.png-c03329ff54eea41f44767ef6718c2498.stex"
+path="res://.import/child_VICTORY_0003_05.png-a445d901bb0b57bd73afc6b1b63f9f14.stex"
 
 [deps]
 
-source_file="res://Graphics/tela_inicial_fundo/tela_inicial_05.png"
-dest_files=[ "res://.import/tela_inicial_05.png-c03329ff54eea41f44767ef6718c2498.stex" ]
+source_file="res://Graphics/vitoria/child_VICTORY_0003_05.png"
+dest_files=[ "res://.import/child_VICTORY_0003_05.png-a445d901bb0b57bd73afc6b1b63f9f14.stex" ]
 
 [params]
 

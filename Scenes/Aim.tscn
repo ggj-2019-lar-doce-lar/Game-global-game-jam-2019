@@ -1,12 +1,16 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scripts/Aim.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
-[ext_resource path="res://Graphics/child_01.png" type="Texture" id=3]
-[ext_resource path="res://Graphics/child_02.png" type="Texture" id=4]
-[ext_resource path="res://Graphics/child_03.png" type="Texture" id=5]
-[ext_resource path="res://Graphics/Anims/Test2.anim" type="Animation" id=6]
-[ext_resource path="res://Graphics/ursinho.png" type="Texture" id=7]
+[ext_resource path="res://Graphics/vitoria/child_VICTORY_0006_02.png" type="Texture" id=3]
+[ext_resource path="res://Graphics/child_01.png" type="Texture" id=4]
+[ext_resource path="res://Graphics/child_02.png" type="Texture" id=5]
+[ext_resource path="res://Graphics/child_03.png" type="Texture" id=6]
+[ext_resource path="res://Graphics/Anims/Test2.anim" type="Animation" id=7]
+[ext_resource path="res://Graphics/vitoria/child_VICTORY_0005_03.png" type="Texture" id=8]
+[ext_resource path="res://Graphics/vitoria/child_VICTORY_0004_04.png" type="Texture" id=9]
+[ext_resource path="res://Graphics/vitoria/child_VICTORY_0003_05.png" type="Texture" id=10]
+[ext_resource path="res://Graphics/ursinho.png" type="Texture" id=11]
 
 [sub_resource type="Animation" id=1]
 
@@ -22,7 +26,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 5.46416, 9.51365 ),
 "update": 1,
-"values": [ ExtResource( 3 ), ExtResource( 4 ) ]
+"values": [ ExtResource( 4 ), ExtResource( 5 ) ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -62,7 +66,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 0, 0.5, 0.7, 0.9 ),
 "transitions": PoolRealArray( 1, 2.46229, 1, 1.56917 ),
 "update": 1,
-"values": [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ]
+"values": [ ExtResource( 4 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("ProjectileSprite:visible")
@@ -111,10 +115,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.5, 0.7, 0.9 ),
-"transitions": PoolRealArray( 1, 2.46229, 1, 1.56917 ),
+"times": PoolRealArray( 0, 0.3, 0.5, 0.7, 0.9 ),
+"transitions": PoolRealArray( 26.9087, 1.86607, 5.65686, 1, 1.10957 ),
 "update": 1,
-"values": [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ]
+"values": [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("ProjectileSprite:visible")
@@ -164,7 +168,7 @@ texture = ExtResource( 3 )
 playback_speed = 1.25
 anims/Idle = SubResource( 1 )
 anims/Oof = SubResource( 2 )
-anims/Shoot = ExtResource( 6 )
+anims/Shoot = ExtResource( 7 )
 anims/Yay = SubResource( 3 )
 
 [node name="ProjectileSprite" type="Sprite" parent="."]
@@ -172,7 +176,7 @@ visible = false
 position = Vector2( -4.5626, 2.89728 )
 rotation = 1.5708
 scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 7 )
+texture = ExtResource( 11 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 373, -29 )
