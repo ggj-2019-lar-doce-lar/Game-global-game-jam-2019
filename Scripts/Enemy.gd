@@ -46,15 +46,16 @@ func barrier_down():
 	pass
 
 func on_animation_ended(anim):
-	if not barrier_is_down and anim == "Attack":
-		$AnimationPlayer.play("Attack")
-	if anim == "Attack" and barrier_is_down:
-		print("Barrier Down")
-		barrier_is_down = false
-		vel_vec = Vector2(-1, 0)
-		$AnimationPlayer.play("Idle")
-	elif anim != "Attack":
-		barrier_is_down = false
+	if vivo:
+		if not barrier_is_down and anim == "Attack":
+			$AnimationPlayer.play("Attack")
+		if anim == "Attack" and barrier_is_down:
+			print("Barrier Down")
+			barrier_is_down = false
+			vel_vec = Vector2(-1, 0)
+			$AnimationPlayer.play("Idle")
+		elif anim != "Attack":
+			barrier_is_down = false
 
 var vivo = true
 func take_damage(damage):
