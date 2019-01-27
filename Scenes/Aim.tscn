@@ -21,8 +21,7 @@ tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 5.46416, 9.51365 ),
-"update": 1,
-"values": [ ExtResource( 3 ), ExtResource( 4 ) ]
+"update": 1,"values": [ ExtResource( 3 ), ExtResource( 4 ) ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -93,9 +92,8 @@ visible = false
 position = Vector2( -107.782, 23.309 )
 rotation = 0.349066
 scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 373, -29 )
 current = true
-

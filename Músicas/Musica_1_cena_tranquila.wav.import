@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Musica_1_cena_tranquila.wav-93fca5499ffddadc0b613dd3063b356a.sample"
+
+[deps]
+
+source_file="res://Músicas/Musica_1_cena_tranquila.wav"
+dest_files=[ "res://.import/Musica_1_cena_tranquila.wav-93fca5499ffddadc0b613dd3063b356a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
