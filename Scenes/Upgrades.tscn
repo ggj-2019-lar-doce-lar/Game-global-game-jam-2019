@@ -2,11 +2,11 @@
 
 [ext_resource path="res://Graphics/Themes/Upgrades.tres" type="Theme" id=1]
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=1]
 
 bg_color = Color( 0.25098, 0.321569, 0.560784, 1 )
 
-[sub_resource type="StyleBoxFlat" id=6]
+[sub_resource type="StyleBoxFlat" id=2]
 
 bg_color = Color( 0.921569, 0.0862745, 0.0862745, 1 )
 
@@ -19,8 +19,8 @@ theme = ExtResource( 1 )
 margin_right = 40.0
 margin_bottom = 40.0
 rect_scale = Vector2( 25.6719, 2.59556 )
-custom_styles/panel = SubResource( 5 )
-custom_styles/panelnc = SubResource( 6 )
+custom_styles/panel = SubResource( 1 )
+custom_styles/panelnc = SubResource( 2 )
 
 [node name="Label" type="Label" parent="."]
 margin_left = 47.7722
@@ -51,6 +51,7 @@ columns = 3
 margin_right = 365.0
 margin_bottom = 56.0
 custom_constants/hseparation = 50
+disabled = true
 text = "Upgrade Gun"
 
 [node name="GunLevel" type="Label" parent="GridContainer"]
@@ -69,6 +70,7 @@ text = "$5000"
 margin_top = 66.0
 margin_right = 365.0
 margin_bottom = 122.0
+disabled = true
 text = "Upgrade Fort"
 
 [node name="FortLevel" type="Label" parent="GridContainer"]
@@ -89,6 +91,7 @@ text = "$5000"
 margin_top = 132.0
 margin_right = 365.0
 margin_bottom = 188.0
+disabled = true
 text = " Upgrade Fire Rate "
 
 [node name="FRLevel" type="Label" parent="GridContainer"]
@@ -109,6 +112,7 @@ text = "$5000"
 margin_top = 198.0
 margin_right = 365.0
 margin_bottom = 254.0
+disabled = true
 text = "Buy Turret"
 
 [node name="TurretNum" type="Label" parent="GridContainer"]
@@ -129,6 +133,7 @@ text = "$5000"
 margin_top = 264.0
 margin_right = 365.0
 margin_bottom = 320.0
+disabled = true
 text = "Buy Turret"
 
 [node name="BarrierNum" type="Label" parent="GridContainer"]
@@ -151,6 +156,7 @@ margin_top = 480.0
 margin_right = 300.0
 margin_bottom = 538.7
 custom_constants/hseparation = 20
+disabled = true
 text = "Refund"
 
 [node name="Return" type="Button" parent="."]
@@ -158,5 +164,6 @@ margin_left = 720.0
 margin_top = 480.0
 margin_right = 970.0
 margin_bottom = 536.0
+disabled = true
 text = "  Return  "
 
