@@ -106,14 +106,15 @@ disabled = true
 text = "Quit"
 
 [node name="LblScore2" type="Label" parent="."]
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -285.299
-margin_top = -158.324
-margin_right = 292.701
-margin_bottom = -102.324
+margin_left = -124.5
+margin_top = -138.0
+margin_right = 124.5
+margin_bottom = -82.0
 theme = ExtResource( 5 )
 custom_styles/normal = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
