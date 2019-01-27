@@ -46,12 +46,16 @@ func game_upgrades():
 	pass
 	
 func enable_death_buttons():
+	$lblEarnedPoints.show()
+	$lblCurrentPoints.show()
 	$ButtonDeathQuit.disabled = false
 	$ButtonDeathRestart.disabled = false
 	$ButtonDeathUpgrades.disabled = false
 	pass
 
 func enable_win_buttons():
+	$lblEarnedPoints.show()
+	$lblCurrentPoints.show()
 	$ButtonWinNext.disabled = false
 	$ButtonWinRestartCurrent.disabled = false
 	$ButtonWinQuit.disabled = false
@@ -92,8 +96,12 @@ func winner():
 	get_tree().paused = true
 	$OptionButton.disabled = true
 	$OptionButton.hide()
-	
-	$Label.show()
+		
+		
+	$LblScore.hide()
+	$LblScore2.text = "Score: "+str(points)		
+	$LblScore2.show()
+		
 	$ButtonWinNext.disabled = false
 	$ButtonWinNext.show()
 	$ButtonWinRestartCurrent.disabled = false
