@@ -91,6 +91,7 @@ func update_labels():
 		var turret_level_display = player.upgrades.turret
 		if turret_level_display == 0:
 			$GridContainer/TurretButton.text = "Buy Turret"
+			$GridContainer/TurretNum.text = "Lv. "+str(turret_level_display)+"  "
 		else:
 			$GridContainer/TurretButton.text = "Upgrade Turret"
 		if turret_level_display >= global.upgrade_chart.turret.size()-1:

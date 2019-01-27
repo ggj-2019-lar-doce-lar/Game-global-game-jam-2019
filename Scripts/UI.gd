@@ -3,6 +3,8 @@ extends CanvasLayer
 var points = 0
 
 func _ready():
+	
+	$LifeBar.rect_scale.x*= pow(2,int(player.upgrades.hp))
 	pass
 	
 func game_quit():
