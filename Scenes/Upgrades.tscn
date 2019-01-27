@@ -133,28 +133,6 @@ margin_right = 614.0
 margin_bottom = 254.0
 text = "$5000"
 
-[node name="TurretButton" type="Button" parent="GridContainer"]
-pause_mode = 2
-margin_top = 264.0
-margin_right = 365.0
-margin_bottom = 320.0
-disabled = true
-text = "Buy Turret"
-
-[node name="TurretNum" type="Label" parent="GridContainer"]
-margin_left = 385.0
-margin_top = 264.0
-margin_right = 474.0
-margin_bottom = 320.0
-text = "0"
-
-[node name="TurretPrice" type="Label" parent="GridContainer"]
-margin_left = 494.0
-margin_top = 264.0
-margin_right = 614.0
-margin_bottom = 320.0
-text = "$5000"
-
 [node name="Refund" type="Button" parent="."]
 pause_mode = 2
 margin_left = 40.0
@@ -178,6 +156,5 @@ text = "Done"
 [connection signal="pressed" from="GridContainer/FortButton" to="." method="_on_FortButton_pressed"]
 [connection signal="pressed" from="GridContainer/FRButton" to="." method="_on_FRButton_pressed"]
 [connection signal="pressed" from="GridContainer/BarrierButton" to="." method="_on_BarrierButton_pressed"]
-[connection signal="pressed" from="GridContainer/TurretButton" to="." method="_on_TurretButton_pressed"]
 [connection signal="pressed" from="Refund" to="." method="_on_Refund_pressed"]
 [connection signal="pressed" from="Return" to="." method="_on_Return_pressed"]

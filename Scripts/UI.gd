@@ -38,7 +38,6 @@ func game_upgrades():
 	$Upgrades/GridContainer/GunButton.disabled = false
 	$Upgrades/GridContainer/FortButton.disabled = false
 	$Upgrades/GridContainer/FRButton.disabled = false
-	$Upgrades/GridContainer/TurretButton.disabled = false
 	$Upgrades/GridContainer/BarrierButton.disabled = false
 	
 	$Upgrades/Refund.disabled = false
