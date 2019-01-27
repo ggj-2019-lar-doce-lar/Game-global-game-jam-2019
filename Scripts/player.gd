@@ -3,7 +3,7 @@ extends Node
 var points = 0
 var damage
 var upgrades = {}
-var total_points
+var total_points = 0
 var current_level = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
