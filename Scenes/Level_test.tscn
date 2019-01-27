@@ -175,7 +175,7 @@ tracks/5/keys = {
 [sub_resource type="Animation" id=4]
 
 resource_name = "Cai_3"
-length = 0.4
+length = 1.4
 tracks/0/type = "value"
 tracks/0/path = NodePath("Camada_1/alm_07:position")
 tracks/0/interp = 1
@@ -249,13 +249,27 @@ tracks/5/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/6/type = "method"
-tracks/6/path = NodePath("..")
+tracks/6/path = NodePath("../Aim/AnimationPlayer")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
 "times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "Oof", -1, 1.0, false ],
+"method": "play"
+} ]
+}
+tracks/7/type = "method"
+tracks/7/path = NodePath("..")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 1.4 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
@@ -522,11 +536,10 @@ texture = ExtResource( 2 )
 centered = false
 
 [node name="Aim" parent="." instance=ExtResource( 3 )]
-position = Vector2( 139.192, 316.783 )
+position = Vector2( 139, 317 )
 timer_delay = 0.8
 
 [node name="DefenseArea" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 173.66, 227.573 )
 __meta__ = {
 "_edit_group_": true
@@ -613,7 +626,6 @@ anims/Cai_2 = SubResource( 3 )
 anims/Cai_3 = SubResource( 4 )
 
 [node name="Barrier" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 502.265, 240.823 )
 __meta__ = {
 "_edit_group_": true

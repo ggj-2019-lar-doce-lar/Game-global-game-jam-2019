@@ -53,7 +53,7 @@ margin_right = 365.0
 margin_bottom = 56.0
 custom_constants/hseparation = 50
 disabled = true
-text = "Upgrade Gun"
+text = "Upgrade Attack"
 
 [node name="GunLevel" type="Label" parent="GridContainer"]
 margin_left = 385.0
@@ -172,7 +172,7 @@ margin_top = 480.0
 margin_right = 970.0
 margin_bottom = 536.0
 disabled = true
-text = "  Return  "
+text = "Done"
 
 [connection signal="pressed" from="GridContainer/GunButton" to="." method="_on_GunButton_pressed"]
 [connection signal="pressed" from="GridContainer/FortButton" to="." method="_on_FortButton_pressed"]
