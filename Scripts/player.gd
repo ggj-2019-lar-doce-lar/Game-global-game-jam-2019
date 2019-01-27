@@ -5,6 +5,7 @@ var points = 0
 var damage
 var shot_cooldown
 var last_level
+var upgrades = {}
 var current_level = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
