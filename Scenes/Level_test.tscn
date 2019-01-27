@@ -714,6 +714,7 @@ anims/Cai_3 = SubResource( 7 )
 [node name="UI" parent="." instance=ExtResource( 12 )]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
 stream = ExtResource( 13 )
 volume_db = -19.184
 autoplay = true

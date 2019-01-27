@@ -21,28 +21,31 @@ var vel_vec = Vector2(-1, 0)
 var attacking_barrier = false
 
 func attack(obj, barrier = false):
-	if barrier:
-		attacking_barrier = true
-	else:
-		barrier_is_down = false
-	player = obj
-	vel_vec = Vector2(0,0)
-	if timer.has_method("start"):
-		timer.start()
-	elif timer.has_method("play"):
-		timer.play("Attack")
-	pass
+	if vivo:
+		if barrier:
+			attacking_barrier = true
+		else:
+			barrier_is_down = false
+		player = obj
+		vel_vec = Vector2(0,0)
+		if timer.has_method("start"):
+			timer.start()
+		elif timer.has_method("play"):
+			timer.play("Attack")
+		pass
 
 func _timeout_attack():
-	if not barrier_is_down:
-		player.get_hit(ATK, attacking_barrier)
+	if vivo:
+		if not barrier_is_down:
+			player.get_hit(ATK, attacking_barrier)
 
 var barrier_is_down = false
 func barrier_down():
-	barrier_is_down = true
-	attacking_barrier = false
-	if not timer.has_method("play"):
-		timer.stop()
+	if vivo:
+		barrier_is_down = true
+		attacking_barrier = false
+		if not timer.has_method("play"):
+			timer.stop()
 	pass
 
 func on_animation_ended(anim):
