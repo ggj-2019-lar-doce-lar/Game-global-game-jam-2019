@@ -23,26 +23,30 @@ custom_styles/panel = ExtResource( 3 )
 custom_styles/panelnc = SubResource( 1 )
 
 [node name="CurrentPoints" type="Label" parent="."]
-margin_left = 47.7722
-margin_top = 18.9334
-margin_right = 474.772
-margin_bottom = 74.9334
+margin_left = 50.0
+margin_top = 20.0
+margin_right = 477.0
+margin_bottom = 76.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Current Points: xxxxxx"
 
 [node name="TotalPoints" type="Label" parent="."]
-margin_left = 529.653
-margin_top = 16.8829
-margin_right = 1579.65
-margin_bottom = 72.8829
+margin_left = 500.0
+margin_top = 20.0
+margin_right = 885.0
+margin_bottom = 76.0
 custom_colors/font_color = Color( 0.372549, 0.0392157, 0.0392157, 1 )
 text = "Total Points: xxxxxx"
 
 [node name="GridContainer" type="GridContainer" parent="."]
-margin_left = 40.0
-margin_top = 124.989
-margin_right = 799.0
-margin_bottom = 468.989
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -310.0
+margin_top = -130.0
+margin_right = 310.0
+margin_bottom = 130.0
 custom_constants/vseparation = 10
 custom_constants/hseparation = 20
 columns = 3
@@ -135,20 +139,22 @@ text = "$5000"
 
 [node name="Refund" type="Button" parent="."]
 pause_mode = 2
-margin_left = 40.0
-margin_top = 480.0
-margin_right = 300.0
-margin_bottom = 538.7
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -58.7
+margin_right = 260.0
 custom_constants/hseparation = 20
 disabled = true
 text = "Refund"
 
 [node name="Return" type="Button" parent="."]
 pause_mode = 2
-margin_left = 720.0
-margin_top = 480.0
-margin_right = 970.0
-margin_bottom = 536.0
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -250.0
+margin_top = -56.0
 disabled = true
 text = "Done"
 
