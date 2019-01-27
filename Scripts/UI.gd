@@ -19,7 +19,6 @@ func game_upgrades():
 	
 	"0 o player perdeu e 1 ele ganhou"
 	var deathOrWin = 0
-	
 	if($ButtonDeathQuit.disabled == true):
 		deathOrWin = 1
 	
@@ -32,19 +31,11 @@ func game_upgrades():
 	$ButtonWinQuit.disabled = true
 	$ButtonWinUpgrades.disabled = true
 	
-	$ButtonDeathQuit.visible = false
-	$ButtonDeathRestart.visible = false
-	$ButtonDeathUpgrades.visible = false
-	
-	$ButtonWinNext.visible = false
-	$ButtonWinRestartCurrent.visible = false
-	$ButtonWinQuit.visible = false
-	$ButtonWinUpgrades.visible = false
-	
 	$FUNDOMORTE.hide()
 	
 	$Upgrades/Label.text = "Current Points: " + str(points)
 	
+	$Upgrades.DeathOrWin = deathOrWin
 	$Upgrades.visible = true
 	$Upgrades/GridContainer/GunButton.disabled = false
 	$Upgrades/GridContainer/FortButton.disabled = false
@@ -56,6 +47,19 @@ func game_upgrades():
 	$Upgrades/Return.disabled = false
 	
 	pass
+	
+func enable_death_buttons():
+	$ButtonDeathQuit.disabled = false
+	$ButtonDeathRestart.disabled = false
+	$ButtonDeathUpgrades.disabled = false
+	pass
+
+func enable_win_buttons():
+	$ButtonWinNext.disabled = false
+	$ButtonWinRestartCurrent.disabled = false
+	$ButtonWinQuit.disabled = false
+	$ButtonWinUpgrades.disabled = false
+	pass		
 	
 func game_restart():
 	get_tree().paused = false
@@ -147,4 +151,3 @@ func _on_ButtonWinNext_pressed():
 	player.current_level += 1
 	game_restart()
 	pass # Replace with function body.
-

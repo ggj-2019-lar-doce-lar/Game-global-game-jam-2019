@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Graphics/Themes/Upgrades.tres" type="Theme" id=1]
+[ext_resource path="res://Scenes/Upgrades.gd" type="Script" id=2]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -14,6 +15,7 @@ bg_color = Color( 0.921569, 0.0862745, 0.0862745, 1 )
 margin_right = 1023.0
 margin_bottom = 576.0
 theme = ExtResource( 1 )
+script = ExtResource( 2 )
 
 [node name="Panel" type="Panel" parent="."]
 margin_right = 40.0
@@ -48,6 +50,7 @@ custom_constants/hseparation = 20
 columns = 3
 
 [node name="GunButton" type="Button" parent="GridContainer"]
+pause_mode = 2
 margin_right = 365.0
 margin_bottom = 56.0
 custom_constants/hseparation = 50
@@ -67,6 +70,7 @@ margin_bottom = 56.0
 text = "$5000"
 
 [node name="FortButton" type="Button" parent="GridContainer"]
+pause_mode = 2
 margin_top = 66.0
 margin_right = 365.0
 margin_bottom = 122.0
@@ -88,6 +92,7 @@ margin_bottom = 122.0
 text = "$5000"
 
 [node name="FRButton" type="Button" parent="GridContainer"]
+pause_mode = 2
 margin_top = 132.0
 margin_right = 365.0
 margin_bottom = 188.0
@@ -109,6 +114,7 @@ margin_bottom = 188.0
 text = "$5000"
 
 [node name="TurretButton" type="Button" parent="GridContainer"]
+pause_mode = 2
 margin_top = 198.0
 margin_right = 365.0
 margin_bottom = 254.0
@@ -130,6 +136,7 @@ margin_bottom = 254.0
 text = "$5000"
 
 [node name="BarrierButton" type="Button" parent="GridContainer"]
+pause_mode = 2
 margin_top = 264.0
 margin_right = 365.0
 margin_bottom = 320.0
@@ -151,6 +158,7 @@ margin_bottom = 320.0
 text = "$5000"
 
 [node name="Refund" type="Button" parent="."]
+pause_mode = 2
 margin_left = 40.0
 margin_top = 480.0
 margin_right = 300.0
@@ -160,6 +168,7 @@ disabled = true
 text = "Refund"
 
 [node name="Return" type="Button" parent="."]
+pause_mode = 2
 margin_left = 720.0
 margin_top = 480.0
 margin_right = 970.0
@@ -167,3 +176,10 @@ margin_bottom = 536.0
 disabled = true
 text = "  Return  "
 
+[connection signal="pressed" from="GridContainer/GunButton" to="." method="_on_GunButton_pressed"]
+[connection signal="pressed" from="GridContainer/FortButton" to="." method="_on_FortButton_pressed"]
+[connection signal="pressed" from="GridContainer/FRButton" to="." method="_on_FRButton_pressed"]
+[connection signal="pressed" from="GridContainer/TurretButton" to="." method="_on_TurretButton_pressed"]
+[connection signal="pressed" from="GridContainer/BarrierButton" to="." method="_on_BarrierButton_pressed"]
+[connection signal="pressed" from="Refund" to="." method="_on_Refund_pressed"]
+[connection signal="pressed" from="Return" to="." method="_on_Return_pressed"]
