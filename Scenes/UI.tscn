@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/UI.gd" type="Script" id=1]
 [ext_resource path="res://Graphics/life_bar.png" type="Texture" id=2]
 [ext_resource path="res://Graphics/Shaders/death_shader.shader" type="Shader" id=3]
 [ext_resource path="res://Graphics/FUNDOMORTE.png" type="Texture" id=4]
-[ext_resource path="res://Scenes/Upgrades.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Graphics/Themes/Upgrades.tres" type="Theme" id=5]
+[ext_resource path="res://Scenes/Upgrades.tscn" type="PackedScene" id=6]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -93,57 +94,99 @@ margin_bottom = 345.0
 disabled = true
 text = "Quit"
 
+[node name="Label2" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -179.5
+margin_top = -208.0
+margin_right = 179.5
+margin_bottom = -152.0
+theme = ExtResource( 5 )
+text = "Total Points: xxxxx"
+
+[node name="Label3" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -202.5
+margin_top = -148.0
+margin_right = 202.5
+margin_bottom = -92.0
+theme = ExtResource( 5 )
+text = "Current Points: xxxxx"
+
 [node name="Label" type="Label" parent="."]
-visible = false
-margin_left = 459.0
-margin_top = 110.0
-margin_right = 618.0
-margin_bottom = 158.0
-text = "Points earned this level: 
-Total Points: 
-Current Points: "
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -289.0
+margin_top = -88.0
+margin_right = 289.0
+margin_bottom = -32.0
+theme = ExtResource( 5 )
+text = "Points earned this level:  xxxxx"
 
 [node name="ButtonWinNext" type="Button" parent="."]
 pause_mode = 2
-visible = false
-margin_left = 459.0
-margin_top = 170.0
-margin_right = 638.0
-margin_bottom = 225.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -122.0
+margin_top = -28.0
+margin_right = 122.0
+margin_bottom = 28.0
+theme = ExtResource( 5 )
 disabled = true
 text = "Next Level"
 
 [node name="ButtonWinRestartCurrent" type="Button" parent="."]
 pause_mode = 2
-visible = false
-margin_left = 459.0
-margin_top = 230.0
-margin_right = 638.0
-margin_bottom = 285.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -122.0
+margin_top = 32.5
+margin_right = 122.0
+margin_bottom = 88.5
+theme = ExtResource( 5 )
 disabled = true
 text = "Restart Level"
 
 [node name="ButtonWinUpgrades" type="Button" parent="."]
 pause_mode = 2
-visible = false
-margin_left = 459.0
-margin_top = 290.0
-margin_right = 638.0
-margin_bottom = 345.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -122.0
+margin_top = 92.5
+margin_right = 122.0
+margin_bottom = 148.5
+theme = ExtResource( 5 )
 disabled = true
 text = "Upgrades"
 
 [node name="ButtonWinQuit" type="Button" parent="."]
 pause_mode = 2
-visible = false
-margin_left = 458.226
-margin_top = 350.0
-margin_right = 637.226
-margin_bottom = 405.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -122.0
+margin_top = 152.5
+margin_right = 122.0
+margin_bottom = 208.5
+theme = ExtResource( 5 )
 disabled = true
 text = "Quit"
 
-[node name="Upgrades" parent="." instance=ExtResource( 5 )]
+[node name="Upgrades" parent="." instance=ExtResource( 6 )]
 visible = false
 
 [connection signal="item_selected" from="OptionButton" to="." method="_on_OptionButton_item_selected" binds= [ 0 ]]
