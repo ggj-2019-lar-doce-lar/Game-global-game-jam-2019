@@ -67,7 +67,11 @@ func _ready():
 			enemy.tempos.sort()
 	max_hp_reference = HP
 	#prints do player
-	
+	print("Points: " + str(player.points))
+	print("Total Points: " + str(player.total_points))
+	print("Last level: " + str(player.last_level))
+	print("Current level: " + str(player.current_level))
+	print("Upgrades: " + str(player.upgrades))
 
 func _enemy_died(enemy):
 	current_enemy_list.erase(enemy)

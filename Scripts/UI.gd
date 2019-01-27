@@ -87,8 +87,10 @@ func winner():
 	if player.last_level == player.current_level:
 		player.last_level += 1
 		if player.last_level >= placeholder:
-			#Zerou
 			pass
+			#Zerou
+	global.save()
+
 	
 	get_tree().paused = true
 	$OptionButton.disabled = true

@@ -35,6 +35,7 @@ func _on_quit():
 #func _process(delta):
 #	pass
 func _on_continue():
+	print("entrou")
 	var save_game = File.new()
 	if not save_game.file_exists("user://savegame.save"):
 		return
@@ -47,7 +48,12 @@ func _on_continue():
 		player.last_level = save.result.last_level
 		player.upgrades = save.result.upgrades
 		player.total_points = save.result.total_points
+		#por enquanto
+		player.current_level = player.last_level
 	else:
 		print("deu ruim")
 		return
+	if get_tree().change_scene_to(global.level_scene) != 0:
+		print("Error: Failed to start Scene")
+		pass
 	return

@@ -1,7 +1,6 @@
 extends Node
 
 var points = 0
-var damage
 var upgrades = {}
 var total_points = 0
 var current_level = 0
