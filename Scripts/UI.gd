@@ -148,7 +148,9 @@ func _on_ButtonDeathQuit_pressed():
 func _on_ButtonWinNext_pressed():
 	player.current_level += 1
 	if player.current_level >= global.level_list.size():
-		game_quit()
+		get_tree().paused = false
+		get_tree().change_scene("res://Scenes/Credits.tscn")
+		#game_quit()
 	else:
 		game_restart()
 	pass # Replace with function body.

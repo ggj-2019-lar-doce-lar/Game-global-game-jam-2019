@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Graphics/tela_creditos.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Credits.gd" type="Script" id=2]
+[ext_resource path="res://Músicas/GGJ_2019.wav" type="AudioStream" id=3]
+
+[node name="Sprite" type="Sprite"]
+position = Vector2( -11.1038, -7.4025 )
+scale = Vector2( 1.34908, 1.34381 )
+texture = ExtResource( 1 )
+centered = false
+script = ExtResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = 0.5
+autoplay = true
+
