@@ -56,13 +56,15 @@ func on_animation_ended(anim):
 	elif anim != "Attack":
 		barrier_is_down = false
 
+var vivo = true
 func take_damage(damage):
 	HP -= damage
 	life_bar.value = HP
-	if HP <= 0:
+	if HP <= 0 and vivo:
+		vivo = false
 		emit_signal("died")
-		hide()
 		set_process(false)
+		$AnimationPlayer.play("Fade_out")
 	pass
 # Called when the node enters the scene tree for the first time.
 func _ready():

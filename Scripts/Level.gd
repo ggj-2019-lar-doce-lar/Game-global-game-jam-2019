@@ -139,7 +139,7 @@ func _enemy_died(enemy):
 	#Bote algo aqui
 	temp_points += enemy.POINTS
 	current_enemy_list.erase(enemy)
-	enemy.queue_free()
+	#enemy.queue_free()
 	pass
 
 var won = false
