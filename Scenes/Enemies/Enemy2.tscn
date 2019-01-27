@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/Enemies/Enemy0.gd" type="Script" id=1]
-[ext_resource path="res://Graphics/ph_ghost.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Enemies/new_ghost.tres" type="Texture" id=2]
 [ext_resource path="res://Graphics/life_bar.png" type="Texture" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
@@ -123,6 +123,8 @@ SPEED = 50
 POINTS = 200
 
 [node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0.0196078, 0.298039, 0.0117647, 1 )
+position = Vector2( -1.10803, 2.21606 )
 rotation = 0.174533
 scale = Vector2( 2, 0.7 )
 texture = ExtResource( 2 )

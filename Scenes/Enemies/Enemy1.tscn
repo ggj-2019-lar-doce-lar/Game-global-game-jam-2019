@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/Enemies/Enemy0.gd" type="Script" id=1]
-[ext_resource path="res://Graphics/ph_ghost.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Enemies/new_ghost.tres" type="Texture" id=2]
 [ext_resource path="res://Graphics/life_bar.png" type="Texture" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
@@ -134,6 +134,7 @@ ATK = 50
 SPEED = 250
 
 [node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0.541176, 0.309804, 1, 1 )
 scale = Vector2( 0.7, 1.4 )
 texture = ExtResource( 2 )
 
@@ -142,10 +143,10 @@ position = Vector2( 7.22001, 44.2224 )
 shape = SubResource( 1 )
 
 [node name="LifeBar" type="TextureProgress" parent="."]
-margin_left = -10.4041
-margin_top = -100.62
-margin_right = 1013.6
-margin_bottom = 475.38
+margin_left = -12.7254
+margin_top = -112.227
+margin_right = 1011.28
+margin_bottom = 463.773
 rect_scale = Vector2( 0.0313887, 0.00998401 )
 value = 50.0
 texture_progress = ExtResource( 3 )
@@ -160,3 +161,4 @@ shape = SubResource( 2 )
 anims/Attack = SubResource( 3 )
 anims/Fade_out = SubResource( 4 )
 anims/Idle = SubResource( 5 )
+
