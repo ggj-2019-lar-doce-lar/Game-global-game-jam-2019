@@ -16,6 +16,13 @@ func _ready():
 
 func _on_new_game():
 	player.current_level = 0
+	player.upgrades = {
+		"hp" : 0,
+		"damage" : 0,
+		"firerate" : 0,
+		"turret" : 0,
+		"barrier" : 0
+	}
 	if get_tree().change_scene_to(global.level_scene) != 0:
 		print("Error: Failed to start Scene")
 		pass
@@ -36,12 +43,10 @@ func _on_continue():
 	save_game.close()
 	var save = JSON.parse(content)
 	if (save.result):
-		player.hp = save.result.hp
 		player.points = save.result.points
-		player.damage = save.result.damage
-		player.shot_cooldown = save.result.shot_cooldown
 		player.last_level = save.result.last_level
 		player.upgrades = save.result.upgrades
+		player.total_points = save.result.total_points
 	else:
 		print("deu ruim")
 		return

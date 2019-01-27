@@ -85,6 +85,15 @@ func set_cooldown(cd):
 	$ShotCooldown.value = cd*100
 
 func winner():
+	var placeholder = 50
+	player.points += points
+	player.total_points += points
+	if player.last_level == player.current_level:
+		player.last_level += 1
+		if player.last_level >= placeholder:
+			#Zerou
+			pass
+	
 	get_tree().paused = true
 	$OptionButton.disabled = true
 	$OptionButton.hide()
@@ -138,6 +147,5 @@ func _on_ButtonDeathQuit_pressed():
 
 func _on_ButtonWinNext_pressed():
 	player.current_level += 1
-	player.points += points
 	game_restart()
 	pass # Replace with function body.

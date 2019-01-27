@@ -25,7 +25,6 @@ var toggle
 
 func _enemy_entered_area(body):
 	if body.is_in_group("Enemy"):
-		print("Enemy_entered")
 		body.attack(self)
 
 var max_hp_reference
@@ -36,10 +35,10 @@ onready var anim_player = $DefenseArea/AnimationPlayer
 func get_hit(damage):
 	HP -= damage
 	var fraction = float(HP)/float(max_hp_reference)
-	if fraction <= 0.67 and not caiu_1:
+	if fraction <= 0.7 and not caiu_1:
 		caiu_1 = true
 		anim_player.play("Cai_1")
-	if fraction <= 0.33 and not caiu_2:
+	if fraction <= 0.4 and not caiu_2:
 		caiu_2 = true
 		anim_player.queue("Cai_2")
 	if HP <= 0 and not caiu_3:
@@ -60,19 +59,18 @@ func _ready():
 		print("Failed to connect signal")
 	pass
 	inimigos = global.get_level_stuff()
-	print(inimigos)
 	if inimigos == null:
 		player.current_level = 0
 		get_tree().change_scene_to(global.title_scene)
 	else:
 		for enemy in inimigos:
 			enemy.tempos.sort()
-	print(inimigos)
 	max_hp_reference = HP
+	#prints do player
+	
 
 func _enemy_died(enemy):
 	current_enemy_list.erase(enemy)
-	print(current_enemy_list.size())
 	#Bote algo aqui
 	temp_points += enemy.POINTS
 	
@@ -97,7 +95,7 @@ func _process(delta):
 				pass
 		pass
 	if acabou and current_enemy_list.size() == 0:
-		print("Ganhou")
+		$Aim.can_shoot = false
 		#Ganhou aqui
 		$UI.winner()
 		
