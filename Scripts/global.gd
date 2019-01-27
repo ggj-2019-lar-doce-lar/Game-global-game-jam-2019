@@ -37,10 +37,7 @@ func retorna_fase(caminho):
 	
 func save():
 	var save_dict = {
-		"hp" : player.hp,
 		"points" : player.points,
-		"damage" : player.damage,
-		"shot_cooldown" : player.shot_cooldown,
 		"last_level" : player.last_level,
 		"upgrades" : player.upgrades,
 		"total_points" : player.total_points

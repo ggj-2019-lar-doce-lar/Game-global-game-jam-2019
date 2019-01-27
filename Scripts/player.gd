@@ -1,10 +1,7 @@
 extends Node
 
-var hp = 500
 var points = 0
 var damage
-var shot_cooldown
-var last_level
 var upgrades = {}
 var total_points
 var current_level = 0
