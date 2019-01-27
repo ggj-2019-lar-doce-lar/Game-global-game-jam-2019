@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://Graphics/quarto2.jpg" type="Texture" id=2]
@@ -12,7 +12,6 @@
 [ext_resource path="res://Graphics/almofadas/alm_05.png" type="Texture" id=10]
 [ext_resource path="res://Graphics/almofadas/alm_06.png" type="Texture" id=11]
 [ext_resource path="res://Scenes/UI.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Músicas/GGJ_2019.wav" type="AudioStream" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -712,11 +711,4 @@ anims/Cai_2 = SubResource( 6 )
 anims/Cai_3 = SubResource( 7 )
 
 [node name="UI" parent="." instance=ExtResource( 12 )]
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-pause_mode = 2
-stream = ExtResource( 13 )
-volume_db = -19.184
-autoplay = true
-bus = "New Bus"
 

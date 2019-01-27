@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/GGJ_Boo_FantasmaAnda.wav-77142d0e47b49cafabc5d9a8886bdeab.sample"
+
+[deps]
+
+source_file="res://Músicas/GGJ_Boo_FantasmaAnda.wav"
+dest_files=[ "res://.import/GGJ_Boo_FantasmaAnda.wav-77142d0e47b49cafabc5d9a8886bdeab.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
