@@ -74,11 +74,11 @@ position = Vector2( 7.22001, 44.2224 )
 shape = SubResource( 1 )
 
 [node name="LifeBar" type="TextureProgress" parent="."]
-margin_left = -32.5874
-margin_top = -127.922
-margin_right = 991.413
-margin_bottom = 448.078
-rect_scale = Vector2( 0.071168, 0.0113962 )
+margin_left = -10.4041
+margin_top = -100.62
+margin_right = 1013.6
+margin_bottom = 475.38
+rect_scale = Vector2( 0.0313887, 0.00998401 )
 value = 50.0
 texture_progress = ExtResource( 3 )
 
