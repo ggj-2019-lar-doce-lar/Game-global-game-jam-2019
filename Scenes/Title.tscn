@@ -1,9 +1,8 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Graphics/Themes/Upgrades.tres" type="Theme" id=1]
 [ext_resource path="res://Scripts/Title.gd" type="Script" id=2]
-[ext_resource path="res://Músicas/GGJ_2019_ghost-house_pianinho.wav" type="AudioStream" id=3]
-[ext_resource path="res://Scenes/AudioStreamPlayer.gd" type="Script" id=4]
+[ext_resource path="res://Músicas/Musica_1_cena_tranquila.wav" type="AudioStream" id=3]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -74,12 +73,7 @@ text = "Quit"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
-volume_db = -27.263
+volume_db = -31.851
 autoplay = true
 mix_target = 1
-script = ExtResource( 4 )
-
-[node name="Tween" type="Tween" parent="AudioStreamPlayer"]
-repeat = true
-playback/repeat = true
 

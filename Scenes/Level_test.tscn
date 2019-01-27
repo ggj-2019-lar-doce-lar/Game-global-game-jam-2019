@@ -12,7 +12,7 @@
 [ext_resource path="res://Graphics/almofadas/alm_05.png" type="Texture" id=10]
 [ext_resource path="res://Graphics/almofadas/alm_06.png" type="Texture" id=11]
 [ext_resource path="res://Scenes/UI.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Músicas/Musica_1_cena_tranquila.wav" type="AudioStream" id=13]
+[ext_resource path="res://Músicas/GGJ_2019.wav" type="AudioStream" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 
