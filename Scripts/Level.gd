@@ -12,7 +12,7 @@ export(int) var HP = 500
 
 var current_enemy_list = []
 
-const enemy_spawn = [Vector2(1100, 290),Vector2(1100, 500)]
+const enemy_spawn = [Vector2(1100, 230),Vector2(1100, 530)]
 func get_random_enemy_position():
 	return enemy_spawn[0] + randf()*(enemy_spawn[1] - enemy_spawn[0])
 	pass
@@ -28,13 +28,29 @@ func _enemy_entered_area(body):
 		print("Enemy_entered")
 		body.attack(self)
 
+var max_hp_reference
+var caiu_1 = false
+var caiu_2 = false
+var caiu_3 = false
+onready var anim_player = $DefenseArea/AnimationPlayer
 func get_hit(damage):
 	HP -= damage
-	if HP <= 0:
-	  $UI.set_life(0)
-	  $UI.game_over()
+	var fraction = float(HP)/float(max_hp_reference)
+	if fraction <= 0.67 and not caiu_1:
+		caiu_1 = true
+		anim_player.play("Cai_1")
+	if fraction <= 0.33 and not caiu_2:
+		caiu_2 = true
+		anim_player.queue("Cai_2")
+	if HP <= 0 and not caiu_3:
+		caiu_3 = true
+		anim_player.queue("Cai_3")
+		$UI.set_life(0)
+		$Aim.can_shoot = false
 	pass
-
+func game_over():
+	
+	$UI.game_over()
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
@@ -52,6 +68,7 @@ func _ready():
 		for enemy in inimigos:
 			enemy.tempos.sort()
 	print(inimigos)
+	max_hp_reference = HP
 
 func _enemy_died(enemy):
 	current_enemy_list.erase(enemy)

@@ -35,4 +35,20 @@ func retorna_fase(caminho):
 		print("Error: wrong JSON format, Screwed up loser")
 		return null
 	
-	
+func save():
+	var save_dict = {
+		"hp" : player.hp,
+		"points" : player.points,
+		"damage" : player.damage,
+		"shot_cooldown" : player.shot_cooldown,
+		"last_level" : player.last_level,
+		"upgrades" : player.upgrades 
+	}
+	var save_game = File.new()
+	if not save_game.file_exists("user://savegame.save"):
+		save_game.open("user://savegame.save", File.WRITE)
+	else:
+		save_game.open("user://savegame.save", File.READ_WRITE)
+	save_game.store_line(to_json(save_dict))
+	save_game.close()
+	return
