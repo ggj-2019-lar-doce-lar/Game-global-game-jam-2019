@@ -97,18 +97,6 @@ theme = ExtResource( 5 )
 disabled = true
 text = "Quit"
 
-[node name="Label2" type="Label" parent="."]
-visible = false
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -162.798
-margin_top = -246.414
-margin_right = 196.202
-margin_bottom = -190.414
-theme = ExtResource( 5 )
-text = "Total Points: xxxxx"
 
 [node name="Label3" type="Label" parent="."]
 visible = false
@@ -122,6 +110,7 @@ margin_right = 202.5
 margin_bottom = -92.0
 theme = ExtResource( 5 )
 text = "Current Points: xxxxx"
+align = 1
 
 [node name="Label" type="Label" parent="."]
 visible = false
@@ -135,6 +124,7 @@ margin_right = 289.0
 margin_bottom = -32.0
 theme = ExtResource( 5 )
 text = "Points earned this level:  xxxxx"
+align = 1
 
 [node name="ButtonWinNext" type="Button" parent="."]
 pause_mode = 2
