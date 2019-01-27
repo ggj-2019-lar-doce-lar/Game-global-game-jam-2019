@@ -42,7 +42,8 @@ func save():
 		"damage" : player.damage,
 		"shot_cooldown" : player.shot_cooldown,
 		"last_level" : player.last_level,
-		"upgrades" : player.upgrades 
+		"upgrades" : player.upgrades,
+		"total_points" : player.total_points
 	}
 	var save_game = File.new()
 	if not save_game.file_exists("user://savegame.save"):

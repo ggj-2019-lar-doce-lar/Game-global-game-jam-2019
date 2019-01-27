@@ -42,6 +42,7 @@ func _on_continue():
 		player.shot_cooldown = save.result.shot_cooldown
 		player.last_level = save.result.last_level
 		player.upgrades = save.result.upgrades
+		player.total_points = save.result.total_points
 	else:
 		print("deu ruim")
 		return
