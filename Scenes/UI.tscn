@@ -71,6 +71,7 @@ margin_left = 459.0
 margin_top = 170.0
 margin_right = 638.0
 margin_bottom = 225.0
+theme = ExtResource( 5 )
 disabled = true
 text = "Restart"
 
@@ -81,6 +82,7 @@ margin_left = 459.0
 margin_top = 230.0
 margin_right = 638.0
 margin_bottom = 285.0
+theme = ExtResource( 5 )
 disabled = true
 text = "Upgrades"
 
@@ -91,22 +93,25 @@ margin_left = 459.0
 margin_top = 290.0
 margin_right = 638.0
 margin_bottom = 345.0
+theme = ExtResource( 5 )
 disabled = true
 text = "Quit"
 
 [node name="Label2" type="Label" parent="."]
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -179.5
-margin_top = -208.0
-margin_right = 179.5
-margin_bottom = -152.0
+margin_left = -162.798
+margin_top = -246.414
+margin_right = 196.202
+margin_bottom = -190.414
 theme = ExtResource( 5 )
 text = "Total Points: xxxxx"
 
 [node name="Label3" type="Label" parent="."]
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -119,6 +124,7 @@ theme = ExtResource( 5 )
 text = "Current Points: xxxxx"
 
 [node name="Label" type="Label" parent="."]
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -132,6 +138,7 @@ text = "Points earned this level:  xxxxx"
 
 [node name="ButtonWinNext" type="Button" parent="."]
 pause_mode = 2
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -146,6 +153,7 @@ text = "Next Level"
 
 [node name="ButtonWinRestartCurrent" type="Button" parent="."]
 pause_mode = 2
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -160,6 +168,7 @@ text = "Restart Level"
 
 [node name="ButtonWinUpgrades" type="Button" parent="."]
 pause_mode = 2
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -174,6 +183,7 @@ text = "Upgrades"
 
 [node name="ButtonWinQuit" type="Button" parent="."]
 pause_mode = 2
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
