@@ -32,7 +32,8 @@ const level_list = [
 					]
 
 var enemy_list = [preload("res://Scenes/Enemies/Enemy0.tscn"),
-					preload("res://Scenes/Enemies/Enemy1.tscn")]
+					preload("res://Scenes/Enemies/Enemy1.tscn"),
+					preload("res://Scenes/Enemies/Enemy2.tscn")]
 					
 var title_scene = preload("res://Scenes/Title.tscn")
 var level_scene = preload("res://Scenes/Level_test.tscn")

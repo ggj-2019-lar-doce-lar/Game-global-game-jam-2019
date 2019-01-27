@@ -83,32 +83,6 @@ func update_labels():
 		else:
 			$GridContainer/BarrierButton.disabled = false
 	
-	if barrier_level_display == 0:
-		$GridContainer/TurretButton.text = "Needs Barrier"
-		$GridContainer/TurretButton.disabled = true
-		pass
-	else:
-		var turret_level_display = player.upgrades.turret
-		if turret_level_display == 0:
-			$GridContainer/TurretButton.text = "Buy Turret"
-			$GridContainer/TurretNum.text = "Lv. "+str(turret_level_display)+"  "
-		else:
-			$GridContainer/TurretButton.text = "Upgrade Turret"
-		if turret_level_display >= global.upgrade_chart.turret.size()-1:
-			$GridContainer/TurretNum.text = "Lv. MAX"
-			$GridContainer/TurretPrice.text = "$"
-			$GridContainer/TurretButton.disabled = true
-		else:
-			$GridContainer/TurretNum.text = "Lv. "+str(turret_level_display)+"  "
-			var price = global.upgrade_chart.turret[turret_level_display+1].price
-			$GridContainer/TurretPrice.text = "$"+str(price)
-			if player.points < price:
-				$GridContainer/TurretButton.disabled = true
-			else:
-				$GridContainer/TurretButton.disabled = false
-	
-	
-	
 	pass
 
 #button events for upgrade screen
@@ -128,11 +102,6 @@ func _on_FRButton_pressed():
 	player.points -= global.upgrade_chart.firerate[player.upgrades.firerate].price
 	pass # Replace with function body.
 
-func _on_TurretButton_pressed():
-	player.upgrades.turret += 1
-	player.points -= global.upgrade_chart.turret[player.upgrades.turret].price
-	pass # Replace with function body.
-
 func _on_BarrierButton_pressed():
 	player.upgrades.barrier += 1
 	player.points -= global.upgrade_chart.barrier[player.upgrades.barrier].price
@@ -140,7 +109,6 @@ func _on_BarrierButton_pressed():
 
 func _on_Refund_pressed():
 	player.upgrades.barrier = 0
-	player.upgrades.turret = 0
 	player.upgrades.damage = 0
 	player.upgrades.hp = 0
 	player.upgrades.firerate = 0
@@ -152,7 +120,6 @@ func _on_Return_pressed():
 	$GridContainer/GunButton.disabled = true
 	$GridContainer/FortButton.disabled = true
 	$GridContainer/FRButton.disabled = true
-	$GridContainer/TurretButton.disabled = true
 	$GridContainer/BarrierButton.disabled = true
 	$Refund.disabled = true
 	$Return.disabled = true

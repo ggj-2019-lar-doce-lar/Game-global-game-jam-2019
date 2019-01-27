@@ -8,6 +8,9 @@ onready var sprite = $AimSprite
 onready var timer = $Timer
 var damage = 0
 
+func win():
+	get_parent().winner()
+
 export(float) var timer_delay = 0.5
 # Declare member variables here. Examples:
 # var a = 2
