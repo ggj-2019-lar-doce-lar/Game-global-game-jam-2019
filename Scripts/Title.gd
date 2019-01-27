@@ -15,6 +15,9 @@ func _ready():
 	pass
 
 func _on_new_game():
+	player.last_level = 0
+	player.points = 0
+	player.total_points = 0
 	player.current_level = 0
 	player.upgrades = {
 		"hp" : 0,
@@ -48,12 +51,17 @@ func _on_continue():
 		player.last_level = save.result.last_level
 		player.upgrades = save.result.upgrades
 		player.total_points = save.result.total_points
-		#por enquanto
-		player.current_level = player.last_level
+		
 	else:
 		print("deu ruim")
 		return
-	if get_tree().change_scene_to(global.level_scene) != 0:
-		print("Error: Failed to start Scene")
-		pass
+	
+	var escolhe = global.choose_scene.instance()
+	add_child(escolhe)
 	return
+	
+func ajeita():
+	$Continue.disabled = false
+	$Start.disabled = false
+	$Quit.disabled = false
+	pass

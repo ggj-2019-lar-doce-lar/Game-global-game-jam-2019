@@ -35,6 +35,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
+HP = 100
 ATK = 50
 
 [node name="Sprite" type="Sprite" parent="."]

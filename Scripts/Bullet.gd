@@ -6,7 +6,7 @@ extends Area2D
 onready var timer = $Timer
 export(int) var speed = 500
 var direction = Vector2(-1,0)
-var damage = 5
+var damage = 50
 var normal = Vector2(0,-1)
 
 # Called when the node enters the scene tree for the first time.

@@ -1,22 +1,21 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://Graphics/quarto2.jpg" type="Texture" id=2]
-[ext_resource path="res://Graphics/child_01.png" type="Texture" id=3]
-[ext_resource path="res://Scenes/Aim.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Graphics/almofadas/alm_07.png" type="Texture" id=5]
-[ext_resource path="res://Graphics/almofadas/alm_08.png" type="Texture" id=6]
-[ext_resource path="res://Graphics/almofadas/alm_03.png" type="Texture" id=7]
-[ext_resource path="res://Graphics/almofadas/alm_04.png" type="Texture" id=8]
-[ext_resource path="res://Graphics/almofadas/alm_02.png" type="Texture" id=9]
-[ext_resource path="res://Graphics/almofadas/alm_01.png" type="Texture" id=10]
-[ext_resource path="res://Graphics/almofadas/alm_05.png" type="Texture" id=11]
-[ext_resource path="res://Graphics/almofadas/alm_06.png" type="Texture" id=12]
-[ext_resource path="res://Scenes/UI.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Aim.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Graphics/almofadas/alm_07.png" type="Texture" id=4]
+[ext_resource path="res://Graphics/almofadas/alm_08.png" type="Texture" id=5]
+[ext_resource path="res://Graphics/almofadas/alm_03.png" type="Texture" id=6]
+[ext_resource path="res://Graphics/almofadas/alm_04.png" type="Texture" id=7]
+[ext_resource path="res://Graphics/almofadas/alm_02.png" type="Texture" id=8]
+[ext_resource path="res://Graphics/almofadas/alm_01.png" type="Texture" id=9]
+[ext_resource path="res://Graphics/almofadas/alm_05.png" type="Texture" id=10]
+[ext_resource path="res://Graphics/almofadas/alm_06.png" type="Texture" id=11]
+[ext_resource path="res://Scenes/UI.tscn" type="PackedScene" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 
-extents = Vector2( 65.4183, 223.7 )
+extents = Vector2( 65.4183, 250.984 )
 
 [sub_resource type="Animation" id=2]
 
@@ -263,8 +262,257 @@ tracks/6/keys = {
 } ]
 }
 
+[sub_resource type="Animation" id=5]
+
+resource_name = "Cai_1"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camada_3/alm_05:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 145.993, 42.2809 ), Vector2( 274.563, 42.2809 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Camada_3/alm_06:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 91.4489, 87.0854 ), Vector2( 216.122, 147.474 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Camada_3/alm_07:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 27.1642, 133.838 ), Vector2( 128.461, 252.667 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Camada_3/alm_08:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -23.4843, 176.694 ), Vector2( 13.5281, 352.016 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Camada_3/alm_09:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -89.7169, 229.291 ), Vector2( -157.898, 363.704 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Camada_3:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( -0.1, 0.1, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+
+resource_name = "Cai_2"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camada_2/alm_03:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 147.942, 65.6572 ), Vector2( 297.939, 57.8651 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Camada_2/alm_04:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 81.7088, 124.098 ), Vector2( 212.226, 149.422 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Camada_2/alm_02:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 29.1123, 163.058 ), Vector2( 118.721, 239.031 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Camada_2/alm_01:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -27.3803, 217.603 ), Vector2( 1.83997, 334.484 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Camada_2/alm_07:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -89.717, 270.199 ), Vector2( -142.314, 377.34 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Camada_2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+
+resource_name = "Cai_3"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camada_1/alm_07:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 140.149, 94.8775 ), Vector2( 239.498, 85.1374 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Camada_1/alm_08:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 87.5528, 145.526 ), Vector2( 21.3202, 102.67 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Camada_1/alm_09:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 34.9563, 196.174 ), Vector2( -132.573, 281.887 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Camada_1/alm_10:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -17.6402, 246.823 ), Vector2( 66.1246, 291.627 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Camada_1/alm_11:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -68.2888, 293.575 ), Vector2( -146.21, 414.353 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Camada_1:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "method"
+tracks/6/path = NodePath("..")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "game_over"
+} ]
+}
+
 [node name="Level_test" type="Node2D"]
 script = ExtResource( 1 )
+
+[node name="WinTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -51.6701, -150.276 )
@@ -272,15 +520,12 @@ scale = Vector2( 0.911099, 0.950904 )
 texture = ExtResource( 2 )
 centered = false
 
-[node name="Boy" type="Sprite" parent="."]
-position = Vector2( 67.618, 346.776 )
-texture = ExtResource( 3 )
-
-[node name="Aim" parent="." instance=ExtResource( 4 )]
-position = Vector2( 58.695, 308.41 )
+[node name="Aim" parent="." instance=ExtResource( 3 )]
+position = Vector2( 139.192, 316.783 )
 timer_delay = 0.8
 
 [node name="DefenseArea" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 173.66, 227.573 )
 __meta__ = {
 "_edit_group_": true
@@ -296,23 +541,23 @@ editor/display_folded = true
 
 [node name="alm_07" type="Sprite" parent="DefenseArea/Camada_1"]
 position = Vector2( 140.149, 94.8775 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 
 [node name="alm_08" type="Sprite" parent="DefenseArea/Camada_1"]
 position = Vector2( 87.5528, 145.526 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 
 [node name="alm_09" type="Sprite" parent="DefenseArea/Camada_1"]
 position = Vector2( 34.9563, 196.174 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 
 [node name="alm_10" type="Sprite" parent="DefenseArea/Camada_1"]
 position = Vector2( -17.6402, 246.823 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 
 [node name="alm_11" type="Sprite" parent="DefenseArea/Camada_1"]
 position = Vector2( -68.2888, 293.575 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 
 [node name="Camada_2" type="Node2D" parent="DefenseArea"]
 editor/display_folded = true
@@ -320,54 +565,138 @@ position = Vector2( 7.79208, 3.89606 )
 
 [node name="alm_03" type="Sprite" parent="DefenseArea/Camada_2"]
 position = Vector2( 147.942, 65.6572 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 
 [node name="alm_04" type="Sprite" parent="DefenseArea/Camada_2"]
 position = Vector2( 81.7088, 124.098 )
-texture = ExtResource( 8 )
+texture = ExtResource( 7 )
 
 [node name="alm_02" type="Sprite" parent="DefenseArea/Camada_2"]
 position = Vector2( 29.1123, 163.058 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="alm_01" type="Sprite" parent="DefenseArea/Camada_2"]
 position = Vector2( -27.3803, 217.603 )
-texture = ExtResource( 10 )
+texture = ExtResource( 9 )
 
 [node name="alm_07" type="Sprite" parent="DefenseArea/Camada_2"]
 position = Vector2( -89.717, 270.199 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="Camada_3" type="Node2D" parent="DefenseArea"]
 editor/display_folded = true
 
 [node name="alm_05" type="Sprite" parent="DefenseArea/Camada_3"]
 position = Vector2( 145.993, 42.2809 )
-texture = ExtResource( 11 )
+texture = ExtResource( 10 )
 
 [node name="alm_06" type="Sprite" parent="DefenseArea/Camada_3"]
 position = Vector2( 91.4489, 87.0854 )
-texture = ExtResource( 12 )
+texture = ExtResource( 11 )
 
 [node name="alm_07" type="Sprite" parent="DefenseArea/Camada_3"]
 position = Vector2( 27.1642, 133.838 )
-texture = ExtResource( 12 )
+texture = ExtResource( 11 )
 
 [node name="alm_08" type="Sprite" parent="DefenseArea/Camada_3"]
 position = Vector2( -23.4843, 176.694 )
-texture = ExtResource( 11 )
+texture = ExtResource( 10 )
 
 [node name="alm_09" type="Sprite" parent="DefenseArea/Camada_3"]
 position = Vector2( -89.7169, 229.291 )
-texture = ExtResource( 12 )
+texture = ExtResource( 11 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="DefenseArea"]
 anims/Cai_1 = SubResource( 2 )
 anims/Cai_2 = SubResource( 3 )
 anims/Cai_3 = SubResource( 4 )
 
-[node name="UI" parent="." instance=ExtResource( 13 )]
+[node name="Barrier" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( 502.265, 240.823 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Position2D" type="Position2D" parent="."]
-position = Vector2( 1064.42, 536.707 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier"]
+position = Vector2( 36.1947, 167.128 )
+rotation = 0.794674
+shape = SubResource( 1 )
+
+[node name="Camada_1" type="Node2D" parent="Barrier"]
+editor/display_folded = true
+
+[node name="alm_07" type="Sprite" parent="Barrier/Camada_1"]
+position = Vector2( 140.149, 94.8775 )
+texture = ExtResource( 4 )
+
+[node name="alm_08" type="Sprite" parent="Barrier/Camada_1"]
+position = Vector2( 87.5528, 145.526 )
+texture = ExtResource( 5 )
+
+[node name="alm_09" type="Sprite" parent="Barrier/Camada_1"]
+position = Vector2( 34.9563, 196.174 )
+texture = ExtResource( 5 )
+
+[node name="alm_10" type="Sprite" parent="Barrier/Camada_1"]
+position = Vector2( -17.6402, 246.823 )
+texture = ExtResource( 4 )
+
+[node name="alm_11" type="Sprite" parent="Barrier/Camada_1"]
+position = Vector2( -68.2888, 293.575 )
+texture = ExtResource( 4 )
+
+[node name="Camada_2" type="Node2D" parent="Barrier"]
+editor/display_folded = true
+position = Vector2( 7.79208, 3.89606 )
+
+[node name="alm_03" type="Sprite" parent="Barrier/Camada_2"]
+position = Vector2( 147.942, 65.6572 )
+texture = ExtResource( 6 )
+
+[node name="alm_04" type="Sprite" parent="Barrier/Camada_2"]
+position = Vector2( 81.7088, 124.098 )
+texture = ExtResource( 7 )
+
+[node name="alm_02" type="Sprite" parent="Barrier/Camada_2"]
+position = Vector2( 29.1123, 163.058 )
+texture = ExtResource( 8 )
+
+[node name="alm_01" type="Sprite" parent="Barrier/Camada_2"]
+position = Vector2( -27.3803, 217.603 )
+texture = ExtResource( 9 )
+
+[node name="alm_07" type="Sprite" parent="Barrier/Camada_2"]
+position = Vector2( -89.717, 270.199 )
+texture = ExtResource( 8 )
+
+[node name="Camada_3" type="Node2D" parent="Barrier"]
+editor/display_folded = true
+
+[node name="alm_05" type="Sprite" parent="Barrier/Camada_3"]
+position = Vector2( 145.993, 42.2809 )
+texture = ExtResource( 10 )
+
+[node name="alm_06" type="Sprite" parent="Barrier/Camada_3"]
+position = Vector2( 91.4489, 87.0854 )
+texture = ExtResource( 11 )
+
+[node name="alm_07" type="Sprite" parent="Barrier/Camada_3"]
+position = Vector2( 27.1642, 133.838 )
+texture = ExtResource( 11 )
+
+[node name="alm_08" type="Sprite" parent="Barrier/Camada_3"]
+position = Vector2( -23.4843, 176.694 )
+texture = ExtResource( 10 )
+
+[node name="alm_09" type="Sprite" parent="Barrier/Camada_3"]
+position = Vector2( -89.7169, 229.291 )
+texture = ExtResource( 11 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Barrier"]
+anims/Cai_1 = SubResource( 5 )
+anims/Cai_2 = SubResource( 6 )
+anims/Cai_3 = SubResource( 7 )
+
+[node name="UI" parent="." instance=ExtResource( 12 )]
 

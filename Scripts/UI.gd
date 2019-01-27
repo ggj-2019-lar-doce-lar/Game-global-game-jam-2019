@@ -17,7 +17,7 @@ func game_pause():
 	
 func game_upgrades():
 	
-	"0 o player perdeu e 1 ele ganhou"
+	#"0 o player perdeu e 1 ele ganhou"
 	var deathOrWin = 0
 	if($ButtonDeathQuit.disabled == true):
 		deathOrWin = 1
@@ -30,10 +30,6 @@ func game_upgrades():
 	$ButtonWinRestartCurrent.disabled = true
 	$ButtonWinQuit.disabled = true
 	$ButtonWinUpgrades.disabled = true
-	
-	$FUNDOMORTE.hide()
-	
-	$Upgrades/Label.text = "Current Points: " + str(points)
 	
 	$Upgrades.DeathOrWin = deathOrWin
 	$Upgrades.visible = true
@@ -76,23 +72,19 @@ func set_max_life(max_life):
 	
 func set_life(life):
 	$LifeBar.value = life*100
-	
-func set_max_cooldown(max_cd):
-	$ShotCooldown.max_value = max_cd*100
-	$ShotCooldown.value = max_cd*100
-	
-func set_cooldown(cd):
-	$ShotCooldown.value = cd*100
 
 func winner():
-	var placeholder = 50
+	print(points)
 	player.points += points
 	player.total_points += points
 	if player.last_level == player.current_level:
 		player.last_level += 1
-		if player.last_level >= placeholder:
-			pass
-			#Zerou
+	if player.last_level >= global.level_list.size():
+		player.last_level = global.level_list.size()-1
+		pass
+	if player.current_level == global.level_list.size()-1:
+		print("Zerou!")
+		pass
 	global.save()
 
 	
@@ -150,5 +142,8 @@ func _on_ButtonDeathQuit_pressed():
 
 func _on_ButtonWinNext_pressed():
 	player.current_level += 1
-	game_restart()
+	if player.current_level >= global.level_list.size():
+		game_quit()
+	else:
+		game_restart()
 	pass # Replace with function body.

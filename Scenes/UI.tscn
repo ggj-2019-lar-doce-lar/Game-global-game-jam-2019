@@ -1,11 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/UI.gd" type="Script" id=1]
 [ext_resource path="res://Graphics/life_bar.png" type="Texture" id=2]
-[ext_resource path="res://Graphics/shoot_bar.png" type="Texture" id=3]
-[ext_resource path="res://Graphics/Shaders/death_shader.shader" type="Shader" id=4]
-[ext_resource path="res://Graphics/FUNDOMORTE.png" type="Texture" id=5]
-[ext_resource path="res://Scenes/Upgrades.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Graphics/Shaders/death_shader.shader" type="Shader" id=3]
+[ext_resource path="res://Graphics/FUNDOMORTE.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/Upgrades.tscn" type="PackedScene" id=5]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -20,7 +19,7 @@ corner_detail = 10
 
 [sub_resource type="ShaderMaterial" id=2]
 
-shader = ExtResource( 4 )
+shader = ExtResource( 3 )
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -35,16 +34,6 @@ rect_pivot_offset = Vector2( 0.26, 0 )
 value = 100.0
 texture_progress = ExtResource( 2 )
 tint_progress = Color( 1, 0, 0, 1 )
-
-[node name="ShotCooldown" type="TextureProgress" parent="."]
-margin_left = 20.0
-margin_top = 80.0
-margin_right = 1044.0
-margin_bottom = 656.0
-rect_scale = Vector2( 0.153954, -0.0353845 )
-value = 100.0
-texture_progress = ExtResource( 3 )
-tint_progress = Color( 0.14902, 0, 1, 1 )
 
 [node name="LblScore" type="Label" parent="."]
 self_modulate = Color( 0.945098, 0.890196, 0.890196, 1 )
@@ -71,7 +60,7 @@ selected = 0
 [node name="FUNDOMORTE" type="Sprite" parent="."]
 visible = false
 material = SubResource( 2 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 centered = false
 
 [node name="ButtonDeathRestart" type="Button" parent="."]
@@ -154,7 +143,7 @@ margin_bottom = 405.0
 disabled = true
 text = "Quit"
 
-[node name="Upgrades" parent="." instance=ExtResource( 6 )]
+[node name="Upgrades" parent="." instance=ExtResource( 5 )]
 visible = false
 
 [connection signal="item_selected" from="OptionButton" to="." method="_on_OptionButton_item_selected" binds= [ 0 ]]

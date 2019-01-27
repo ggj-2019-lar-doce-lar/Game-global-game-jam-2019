@@ -18,7 +18,13 @@ signal died()
 onready var life_bar = $LifeBar
 var vel_vec = Vector2(-1, 0)
 
-func attack(obj):
+var attacking_barrier = false
+
+func attack(obj, barrier = false):
+	if barrier:
+		attacking_barrier = true
+	else:
+		barrier_is_down = false
 	player = obj
 	vel_vec = Vector2(0,0)
 	if timer.has_method("start"):
@@ -28,7 +34,27 @@ func attack(obj):
 	pass
 
 func _timeout_attack():
-	player.get_hit(ATK)
+	if not barrier_is_down:
+		player.get_hit(ATK, attacking_barrier)
+
+var barrier_is_down = false
+func barrier_down():
+	barrier_is_down = true
+	attacking_barrier = false
+	if not timer.has_method("play"):
+		timer.stop()
+	pass
+
+func on_animation_ended(anim):
+	if not barrier_is_down and anim == "Attack":
+		$AnimationPlayer.play("Attack")
+	if anim == "Attack" and barrier_is_down:
+		print("Barrier Down")
+		barrier_is_down = false
+		vel_vec = Vector2(-1, 0)
+		$AnimationPlayer.play("Idle")
+	elif anim != "Attack":
+		barrier_is_down = false
 
 func take_damage(damage):
 	HP -= damage
@@ -44,12 +70,15 @@ func _ready():
 	for child in get_children():
 		if child.name == "AnimationPlayer":
 			has_animation = true
+			
 	if not has_animation:
 		timer = Timer.new()
 		timer.wait_time = ATTACK_DELAY
 		add_child(timer)
 		timer.connect("timeout",self,"_timeout_attack")
 	else:
+		$AnimationPlayer.play("Idle")
+		$AnimationPlayer.connect("animation_finished",self,"on_animation_ended")
 		timer = $AnimationPlayer
 	$Area2D.add_to_group("Enemy")
 	life_bar.min_value = 0

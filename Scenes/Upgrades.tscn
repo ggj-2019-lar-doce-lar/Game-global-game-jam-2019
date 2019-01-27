@@ -1,17 +1,15 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Graphics/Themes/Upgrades.tres" type="Theme" id=1]
-[ext_resource path="res://Scenes/Upgrades.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Upgrades.gd" type="Script" id=2]
+[ext_resource path="res://Graphics/Styles/UpStyleBox.stylebox" type="StyleBox" id=3]
 
 [sub_resource type="StyleBoxFlat" id=1]
-
-bg_color = Color( 0.25098, 0.321569, 0.560784, 1 )
-
-[sub_resource type="StyleBoxFlat" id=2]
 
 bg_color = Color( 0.921569, 0.0862745, 0.0862745, 1 )
 
 [node name="Upgrades" type="Panel"]
+pause_mode = 2
 margin_right = 1023.0
 margin_bottom = 576.0
 theme = ExtResource( 1 )
@@ -21,10 +19,10 @@ script = ExtResource( 2 )
 margin_right = 40.0
 margin_bottom = 40.0
 rect_scale = Vector2( 25.6719, 2.59556 )
-custom_styles/panel = SubResource( 1 )
-custom_styles/panelnc = SubResource( 2 )
+custom_styles/panel = ExtResource( 3 )
+custom_styles/panelnc = SubResource( 1 )
 
-[node name="Label" type="Label" parent="."]
+[node name="CurrentPoints" type="Label" parent="."]
 margin_left = 47.7722
 margin_top = 18.9334
 margin_right = 474.772
@@ -32,7 +30,7 @@ margin_bottom = 74.9334
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Current Points: xxxxxx"
 
-[node name="Label2" type="Label" parent="."]
+[node name="TotalPoints" type="Label" parent="."]
 margin_left = 529.653
 margin_top = 16.8829
 margin_right = 1579.65
@@ -113,29 +111,29 @@ margin_right = 614.0
 margin_bottom = 188.0
 text = "$5000"
 
-[node name="TurretButton" type="Button" parent="GridContainer"]
+[node name="BarrierButton" type="Button" parent="GridContainer"]
 pause_mode = 2
 margin_top = 198.0
 margin_right = 365.0
 margin_bottom = 254.0
 disabled = true
-text = "Buy Turret"
+text = "Buy Barrier"
 
-[node name="TurretNum" type="Label" parent="GridContainer"]
+[node name="BarrierNum" type="Label" parent="GridContainer"]
 margin_left = 385.0
 margin_top = 198.0
 margin_right = 474.0
 margin_bottom = 254.0
 text = "0"
 
-[node name="TurretPrice" type="Label" parent="GridContainer"]
+[node name="BarrierPrice" type="Label" parent="GridContainer"]
 margin_left = 494.0
 margin_top = 198.0
 margin_right = 614.0
 margin_bottom = 254.0
 text = "$5000"
 
-[node name="BarrierButton" type="Button" parent="GridContainer"]
+[node name="TurretButton" type="Button" parent="GridContainer"]
 pause_mode = 2
 margin_top = 264.0
 margin_right = 365.0
@@ -143,14 +141,14 @@ margin_bottom = 320.0
 disabled = true
 text = "Buy Turret"
 
-[node name="BarrierNum" type="Label" parent="GridContainer"]
+[node name="TurretNum" type="Label" parent="GridContainer"]
 margin_left = 385.0
 margin_top = 264.0
 margin_right = 474.0
 margin_bottom = 320.0
 text = "0"
 
-[node name="BarrierPrice" type="Label" parent="GridContainer"]
+[node name="TurretPrice" type="Label" parent="GridContainer"]
 margin_left = 494.0
 margin_top = 264.0
 margin_right = 614.0
@@ -179,7 +177,7 @@ text = "  Return  "
 [connection signal="pressed" from="GridContainer/GunButton" to="." method="_on_GunButton_pressed"]
 [connection signal="pressed" from="GridContainer/FortButton" to="." method="_on_FortButton_pressed"]
 [connection signal="pressed" from="GridContainer/FRButton" to="." method="_on_FRButton_pressed"]
-[connection signal="pressed" from="GridContainer/TurretButton" to="." method="_on_TurretButton_pressed"]
 [connection signal="pressed" from="GridContainer/BarrierButton" to="." method="_on_BarrierButton_pressed"]
+[connection signal="pressed" from="GridContainer/TurretButton" to="." method="_on_TurretButton_pressed"]
 [connection signal="pressed" from="Refund" to="." method="_on_Refund_pressed"]
 [connection signal="pressed" from="Return" to="." method="_on_Return_pressed"]
