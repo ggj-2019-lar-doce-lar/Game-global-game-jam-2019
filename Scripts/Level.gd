@@ -25,7 +25,6 @@ var toggle
 
 func _enemy_entered_area(body):
 	if body.is_in_group("Enemy"):
-		print("Enemy_entered")
 		body.attack(self)
 
 var max_hp_reference
@@ -60,21 +59,18 @@ func _ready():
 		print("Failed to connect signal")
 	pass
 	inimigos = global.get_level_stuff()
-	print(inimigos)
 	if inimigos == null:
 		player.current_level = 0
 		get_tree().change_scene_to(global.title_scene)
 	else:
 		for enemy in inimigos:
 			enemy.tempos.sort()
-	print(inimigos)
 	max_hp_reference = HP
 	#prints do player
 	
 
 func _enemy_died(enemy):
 	current_enemy_list.erase(enemy)
-	print(current_enemy_list.size())
 	#Bote algo aqui
 	temp_points += enemy.POINTS
 	
@@ -99,7 +95,6 @@ func _process(delta):
 				pass
 		pass
 	if acabou and current_enemy_list.size() == 0:
-		print("Ganhou")
 		$Aim.can_shoot = false
 		#Ganhou aqui
 		$UI.winner()

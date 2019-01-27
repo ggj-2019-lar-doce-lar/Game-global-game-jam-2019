@@ -23,7 +23,6 @@ func _process(delta):
 	
 func _enemy_entered(area):
 	if area.is_in_group("Enemy"):
-		print("Found enemy")
 		if area.get_parent().has_method("take_damage"):
 			area.get_parent().take_damage(damage)
 			queue_free()

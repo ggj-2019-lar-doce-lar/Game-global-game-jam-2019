@@ -44,7 +44,6 @@ func _ready():
 	for child in get_children():
 		if child.name == "AnimationPlayer":
 			has_animation = true
-			print("has_animation")
 	if not has_animation:
 		timer = Timer.new()
 		timer.wait_time = ATTACK_DELAY
