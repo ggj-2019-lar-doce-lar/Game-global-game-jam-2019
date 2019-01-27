@@ -1,42 +1,21 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/Enemies/Enemy0.gd" type="Script" id=1]
-[ext_resource path="res://Graphics/fantasma/ghost_0005_gh_01.png" type="Texture" id=2]
-[ext_resource path="res://Graphics/fantasma/ghost_0004_gh_02.png" type="Texture" id=3]
-[ext_resource path="res://Graphics/fantasma/ghost_0003_gh_03.png" type="Texture" id=4]
-[ext_resource path="res://Graphics/fantasma/ghost_0002_gh_04.png" type="Texture" id=5]
-[ext_resource path="res://Graphics/fantasma/ghost_0001_gh_05.png" type="Texture" id=6]
-[ext_resource path="res://Graphics/fantasma/ghost_0000_gh_06.png" type="Texture" id=7]
-[ext_resource path="res://Graphics/life_bar.png" type="Texture" id=8]
+[ext_resource path="res://Graphics/ph_ghost.png" type="Texture" id=2]
+[ext_resource path="res://Graphics/life_bar.png" type="Texture" id=3]
 
-[sub_resource type="AnimatedTexture" id=7]
-
-flags = 4
-frames = 6
-frame_0/texture = ExtResource( 2 )
-frame_0/delay_sec = 0.56
-frame_1/texture = ExtResource( 3 )
-frame_1/delay_sec = 0.56
-frame_2/texture = ExtResource( 4 )
-frame_2/delay_sec = 0.56
-frame_3/texture = ExtResource( 5 )
-frame_3/delay_sec = 0.56
-frame_4/texture = ExtResource( 6 )
-frame_4/delay_sec = 0.22
-frame_5/texture = ExtResource( 7 )
-frame_5/delay_sec = 0.56
-
-[sub_resource type="CircleShape2D" id=8]
+[sub_resource type="CircleShape2D" id=1]
 
 radius = 26.8211
 
-[sub_resource type="CapsuleShape2D" id=9]
+[sub_resource type="CapsuleShape2D" id=2]
 
 radius = 26.9958
 height = 103.268
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=3]
 
+resource_name = "Attack"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:position")
 tracks/0/interp = 1
@@ -119,11 +98,7 @@ tracks/2/keys = {
 } ]
 }
 
-<<<<<<< HEAD
-[sub_resource type="Animation" id=6]
-=======
 [sub_resource type="Animation" id=5]
->>>>>>> 58e05c7d59c5a29064864ffee71a38702937689a
 
 length = 0.5
 tracks/0/type = "value"
@@ -159,14 +134,12 @@ ATK = 50
 SPEED = 250
 
 [node name="Sprite" type="Sprite" parent="."]
-modulate = Color( 0.380392, 0.772549, 0.109804, 1 )
-position = Vector2( 19.6436, -4.47907 )
-scale = Vector2( 0.954564, 1.17459 )
-texture = SubResource( 7 )
+scale = Vector2( 0.7, 1.4 )
+texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 7.22001, 44.2224 )
-shape = SubResource( 8 )
+shape = SubResource( 1 )
 
 [node name="LifeBar" type="TextureProgress" parent="."]
 margin_left = -10.4041
@@ -175,22 +148,15 @@ margin_right = 1013.6
 margin_bottom = 475.38
 rect_scale = Vector2( 0.0313887, 0.00998401 )
 value = 50.0
-texture_progress = ExtResource( 8 )
+texture_progress = ExtResource( 3 )
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 5.41501, -9.02502 )
-shape = SubResource( 9 )
+shape = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-<<<<<<< HEAD
-anims/Attack = SubResource( 10 )
-anims/Fade_out = SubResource( 5 )
-anims/Idle = SubResource( 6 )
-=======
 anims/Attack = SubResource( 3 )
 anims/Fade_out = SubResource( 4 )
 anims/Idle = SubResource( 5 )
->>>>>>> 58e05c7d59c5a29064864ffee71a38702937689a
-
