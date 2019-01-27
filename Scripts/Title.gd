@@ -65,3 +65,5 @@ func ajeita():
 	$Start.disabled = false
 	$Quit.disabled = false
 	pass
+	
+
