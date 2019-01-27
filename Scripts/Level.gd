@@ -36,10 +36,10 @@ onready var anim_player = $DefenseArea/AnimationPlayer
 func get_hit(damage):
 	HP -= damage
 	var fraction = float(HP)/float(max_hp_reference)
-	if fraction <= 0.67 and not caiu_1:
+	if fraction <= 0.7 and not caiu_1:
 		caiu_1 = true
 		anim_player.play("Cai_1")
-	if fraction <= 0.33 and not caiu_2:
+	if fraction <= 0.4 and not caiu_2:
 		caiu_2 = true
 		anim_player.queue("Cai_2")
 	if HP <= 0 and not caiu_3:
@@ -98,6 +98,7 @@ func _process(delta):
 		pass
 	if acabou and current_enemy_list.size() == 0:
 		print("Ganhou")
+		$Aim.can_shoot = false
 		#Ganhou aqui
 		$UI.winner()
 		

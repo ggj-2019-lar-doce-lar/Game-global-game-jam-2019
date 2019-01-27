@@ -16,6 +16,45 @@ func game_pause():
 		get_tree().paused = true
 	
 func game_upgrades():
+	
+	"0 o player perdeu e 1 ele ganhou"
+	var deathOrWin = 0
+	
+	if($ButtonDeathQuit.disabled == true):
+		deathOrWin = 1
+	
+	$ButtonDeathQuit.disabled = true
+	$ButtonDeathRestart.disabled = true
+	$ButtonDeathUpgrades.disabled = true
+	
+	$ButtonWinNext.disabled = true
+	$ButtonWinRestartCurrent.disabled = true
+	$ButtonWinQuit.disabled = true
+	$ButtonWinUpgrades.disabled = true
+	
+	$ButtonDeathQuit.visible = false
+	$ButtonDeathRestart.visible = false
+	$ButtonDeathUpgrades.visible = false
+	
+	$ButtonWinNext.visible = false
+	$ButtonWinRestartCurrent.visible = false
+	$ButtonWinQuit.visible = false
+	$ButtonWinUpgrades.visible = false
+	
+	$FUNDOMORTE.hide()
+	
+	$Upgrades/Label.text = "Current Points: " + str(points)
+	
+	$Upgrades.visible = true
+	$Upgrades/GridContainer/GunButton.disabled = false
+	$Upgrades/GridContainer/FortButton.disabled = false
+	$Upgrades/GridContainer/FRButton.disabled = false
+	$Upgrades/GridContainer/TurretButton.disabled = false
+	$Upgrades/GridContainer/BarrierButton.disabled = false
+	
+	$Upgrades/Refund.disabled = false
+	$Upgrades/Return.disabled = false
+	
 	pass
 	
 func game_restart():
@@ -52,6 +91,8 @@ func winner():
 	$ButtonWinRestartCurrent.show()
 	$ButtonWinQuit.disabled = false
 	$ButtonWinQuit.show()
+	$ButtonWinUpgrades.disabled = false
+	$ButtonWinUpgrades.show()
 
 func game_over():
 	
@@ -74,7 +115,6 @@ func _on_OptionButton_item_selected(ID, extra_arg_0):
 	elif(ID == 2):
 		game_quit()
 	pass # Replace with function body.
-
 
 func _on_OptionButton_pressed():
 	game_pause()
