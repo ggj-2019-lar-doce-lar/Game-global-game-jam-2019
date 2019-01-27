@@ -28,7 +28,8 @@ const level_list = [
 					"res://Scenes/Levels/level_1.json",
 					"res://Scenes/Levels/level_2.json",
 					"res://Scenes/Levels/level_3.json",
-					"res://Scenes/Levels/level_4.json"
+					"res://Scenes/Levels/level_4.json",
+					"res://Scenes/Levels/level_5.json"
 					]
 
 var enemy_list = [preload("res://Scenes/Enemies/Enemy0.tscn"),
