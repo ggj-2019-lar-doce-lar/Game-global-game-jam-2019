@@ -22,25 +22,19 @@ rect_scale = Vector2( 25.6719, 2.59556 )
 custom_styles/panel = SubResource( 5 )
 custom_styles/panelnc = SubResource( 6 )
 
-[node name="HSplitContainer" type="HSplitContainer" parent="."]
+[node name="Label" type="Label" parent="."]
 margin_left = 47.7722
-margin_top = 12.9334
-margin_right = 1097.77
-margin_bottom = 81.9334
-custom_constants/separation = 50
-
-[node name="Label" type="Label" parent="HSplitContainer"]
-margin_top = 6.0
-margin_right = 427.0
-margin_bottom = 62.0
+margin_top = 18.9334
+margin_right = 474.772
+margin_bottom = 74.9334
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Current Points: xxxxxx"
 
-[node name="Label2" type="Label" parent="HSplitContainer"]
-margin_left = 477.0
-margin_top = 6.0
-margin_right = 1050.0
-margin_bottom = 62.0
+[node name="Label2" type="Label" parent="."]
+margin_left = 529.653
+margin_top = 16.8829
+margin_right = 1579.65
+margin_bottom = 72.8829
 custom_colors/font_color = Color( 0.372549, 0.0392157, 0.0392157, 1 )
 text = "Total Points: xxxxxx"
 
