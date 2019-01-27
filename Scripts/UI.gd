@@ -100,6 +100,7 @@ func winner():
 	$OptionButton.disabled = true
 	$OptionButton.hide()
 	
+	$Label.show()
 	$ButtonWinNext.disabled = false
 	$ButtonWinNext.show()
 	$ButtonWinRestartCurrent.disabled = false

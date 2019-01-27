@@ -104,6 +104,16 @@ margin_bottom = 345.0
 disabled = true
 text = "Quit"
 
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = 459.0
+margin_top = 110.0
+margin_right = 618.0
+margin_bottom = 158.0
+text = "Points earned this level: 
+Total Points: 
+Current Points: "
+
 [node name="ButtonWinNext" type="Button" parent="."]
 pause_mode = 2
 visible = false
