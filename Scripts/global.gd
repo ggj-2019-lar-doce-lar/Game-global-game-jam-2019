@@ -45,7 +45,10 @@ func save():
 		"upgrades" : player.upgrades 
 	}
 	var save_game = File.new()
-	save_game.open("user://savegame.save", File.WRITE)
+	if not save_game.file_exists("user://savegame.save"):
+		save_game.open("user://savegame.save", File.WRITE)
+	else:
+		save_game.open("user://savegame.save", File.READ_WRITE)
 	save_game.store_line(to_json(save_dict))
 	save_game.close()
 	return

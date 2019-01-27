@@ -10,6 +10,9 @@ func _ready():
 	if $Quit.connect("pressed",self,"_on_quit") != 0:
 		print("Error: Failed connecting_signal")
 	pass # Replace with function body.
+	if $Continue.connect("pressed",self,"_on_continue") != 0:
+		print("Error: Failed connecting_signal")
+	pass
 
 func _on_new_game():
 	player.current_level = 0
@@ -24,3 +27,22 @@ func _on_quit():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+func _on_continue():
+	var save_game = File.new()
+	if not save_game.file_exists("user://savegame.save"):
+		return
+	save_game.open("user://savegame.save", File.READ)
+	var content = save_game.get_as_text()
+	save_game.close()
+	var save = JSON.parse(content)
+	if (save.result):
+		player.hp = save.result.hp
+		player.points = save.result.points
+		player.damage = save.result.damage
+		player.shot_cooldown = save.result.shot_cooldown
+		player.last_level = save.result.last_level
+		player.upgrades = save.result.upgrades
+	else:
+		print("deu ruim")
+		return
+	return
