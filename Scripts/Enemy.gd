@@ -38,6 +38,9 @@ func _timeout_attack():
 	if vivo:
 		if not barrier_is_down:
 			player.get_hit(ATK, attacking_barrier)
+			for child in get_children():
+				if child.name == "SSSofa":
+					get_node("SSSofa").play()
 
 var barrier_is_down = false
 func barrier_down():

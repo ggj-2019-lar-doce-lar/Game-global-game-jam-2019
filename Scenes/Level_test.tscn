@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://Graphics/quarto2.jpg" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Graphics/almofadas/alm_05.png" type="Texture" id=10]
 [ext_resource path="res://Graphics/almofadas/alm_06.png" type="Texture" id=11]
 [ext_resource path="res://Scenes/UI.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Músicas/GGJ_2019_ghost-house_pianinho.wav" type="AudioStream" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -507,7 +508,7 @@ tracks/5/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/6/type = "method"
-tracks/6/path = NodePath("..")
+tracks/6/path = NodePath(".")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -517,7 +518,7 @@ tracks/6/keys = {
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
-"method": "game_over"
+"method": "queue_free"
 } ]
 }
 
@@ -535,6 +536,7 @@ position = Vector2( 139, 317 )
 timer_delay = 0.8
 
 [node name="DefenseArea" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 173.66, 227.573 )
 __meta__ = {
 "_edit_group_": true
@@ -707,4 +709,9 @@ anims/Cai_2 = SubResource( 6 )
 anims/Cai_3 = SubResource( 7 )
 
 [node name="UI" parent="." instance=ExtResource( 12 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+volume_db = -18.0
+autoplay = true
 

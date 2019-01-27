@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Músicas/sfx_boo_pillow_demo.wav" type="AudioStream" id=1]
+
+[node name="StrikeSofa" type="AudioStreamPlayer2D"]
+position = Vector2( 1078.64, 294.174 )
+stream = ExtResource( 1 )
+volume_db = -13.0
+

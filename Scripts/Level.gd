@@ -11,6 +11,9 @@ var timer = 0
 var max_hp
 var HP
 
+var ghost_spawn = load("res://Scenes/GhostSpawn.tscn")
+var strike_sofa = load("res://Scenes/StrikeSofa.tscn")
+
 var barrier_max_hp
 var barrier_hp
 
@@ -71,7 +74,6 @@ func get_hit(damage, barrier = false):
 			barrier_caiu_3 = true
 			barrier_anim_player.queue("Cai_3")
 			#Barrier_down
-			$Barrier.queue_free()
 			for enemy in current_enemy_list:
 				enemy.barrier_down()
 		pass
@@ -156,6 +158,12 @@ func _process(delta):
 					current_enemy_list.append(new_enemy)
 					new_enemy.connect("died",self,"_enemy_died",[new_enemy])
 					add_child(new_enemy)
+					var ghostsound = ghost_spawn.instance()
+					var sofasound = strike_sofa.instance()
+					new_enemy.add_child(ghostsound)
+					new_enemy.add_child(sofasound)
+					sofasound.name = "SSSofa"
+					ghostsound.play()
 					new_enemy.position = get_random_enemy_position()
 				pass
 		pass
