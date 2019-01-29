@@ -22,7 +22,7 @@ _global_script_class_icons={
 
 config/name="Boo!"
 run/main_scene="res://Scenes/Title.tscn"
-config/icon="res://icon.png"
+config/icon="res://Graphics/tela_inicial_fundo/tela_inicial_01.png"
 
 [autoload]
 
