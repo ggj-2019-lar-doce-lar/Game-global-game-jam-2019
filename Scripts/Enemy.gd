@@ -71,6 +71,7 @@ func take_damage(damage):
 		vivo = false
 		emit_signal("died")
 		set_process(false)
+		$CollisionShape2D.disabled=true
 		$AnimationPlayer.play("Fade_out")
 	pass
 # Called when the node enters the scene tree for the first time.
